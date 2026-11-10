@@ -838,7 +838,7 @@ row.appendChild(el('span','tag',
 const wi=el('input');wi.type='text';wi.inputMode='decimal';
 wi.placeholder=LANG==='en'?'kg':'كغ';wi.value=rc.w||(p&&p.w?p.w:'');
 const ri=el('input');ri.type='text';ri.inputMode='numeric';
-ri.placeholder=LANG==='en'?'reps':'تكرار';ri.value=rc.r||'';
+ri.placeholder=LANG==='en'?'reps':'تكرار';ri.value=rc.r||(p&&p.r?p.r:'');
 const save=()=>{LOG[k]={...(LOG[k]||{}),w:wi.value,r:ri.value};store.set('ppl4-log',LOG)};
 wi.onchange=save;ri.onchange=save;
 const tick=el('button','tick','✓');
