@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#030407">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PPL">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>PPL — Lokman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#030407;--surface:#0D0F15;--raised:#15181F;--edge:#272C38;--ink:#F8FAFD;--mute:#99A3B3;--dim:#5F6978;--accent:#FF1F3D;--accent2:#FF6B00;--glow:rgba(255,31,61,.30);--ok:#00E87A;--nav-h:66px;--display:'Sora',system-ui,sans-serif;--sans:'Inter',system-ui,-apple-system,sans-serif;--ar:'IBM Plex Sans Arabic','Inter',system-ui,sans-serif}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;padding:0}body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom));overscroll-behavior-y:none}body[dir="rtl"]{font-family:var(--ar)}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}input{font:inherit}.dsp{font-family:var(--display);font-weight:800;letter-spacing:-.02em}body[dir="rtl"] .dsp{font-family:var(--ar);letter-spacing:0}.tnum{font-variant-numeric:tabular-nums}header{position:sticky;top:0;z-index:40;padding-top:env(safe-area-inset-top);background:rgba(3,4,7,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--edge)}.hrow{display:flex;align-items:center;gap:10px;padding:13px 18px 11px}.brand{flex:1;font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-.02em}.brand i{font-style:normal;color:var(--accent)}.pill{border:1px solid var(--edge);border-radius:99px;padding:6px 12px;font-size:12px;font-weight:600;color:var(--mute);background:var(--surface)}.pill:active{background:var(--raised)}.rail{display:flex;gap:7px;overflow-x:auto;padding:0 18px 12px;scrollbar-width:none}.rail::-webkit-scrollbar{display:none}.rchip{flex:0 0 auto;border-radius:11px;padding:7px 11px;background:var(--surface);border:1px solid var(--edge);display:flex;flex-direction:column;gap:1px;min-width:68px;position:relative}.rchip u{text-decoration:none;font-size:9.5px;color:var(--dim);font-weight:700}.rchip b{font-family:var(--display);font-weight:700;font-size:12px}.rchip.next{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#14030A;box-shadow:0 4px 18px var(--glow)}.rchip.next u{color:rgba(18,7,4,.6)}.rchip.on:not(.next){border-color:var(--accent)}.rchip.recent::after{content:'';position:absolute;top:7px;inset-inline-end:8px;width:6px;height:6px;border-radius:99px;background:var(--ok)}main{padding:18px 18px 30px;max-width:620px;margin:0 auto}.view{display:none}.view.on{display:block}.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}h2.title{font-family:var(--display);font-weight:800;font-size:32px;line-height:1.05;letter-spacing:-.03em;margin:0 0 8px}body[dir="rtl"] h2.title{font-family:var(--ar);font-size:25px;letter-spacing:0;line-height:1.35}.sub{color:var(--mute);font-size:13.5px;margin:0 0 18px}h3.sec{font-family:var(--display);font-weight:700;font-size:16px;margin:28px 0 12px;display:flex;align-items:center;gap:10px}h3.sec::after{content:'';flex:1;height:1px;background:var(--edge)}body[dir="rtl"] h3.sec{font-family:var(--ar)}.upnext{display:flex;align-items:center;gap:11px;background:var(--surface);border:1px solid var(--edge);border-radius:14px;padding:12px 14px;margin:0 0 16px}.upnext .dot{width:9px;height:9px;border-radius:99px;background:var(--accent);flex:0 0 auto;box-shadow:0 0 0 4px var(--glow)}.upnext .tx{flex:1;font-size:12.5px;color:var(--mute);line-height:1.45}.upnext .tx b{display:block;color:var(--ink);font-size:13.5px;font-weight:600}.upnext .jump{font-size:12px;font-weight:600;color:var(--accent);white-space:nowrap}.meter{display:flex;align-items:center;gap:13px;margin:0 0 18px}.meter .bar{flex:1;height:7px;background:var(--raised);border-radius:99px;overflow:hidden}.meter .fill{height:100%;width:0;border-radius:99px;transition:width .4s cubic-bezier(.4,0,.2,1);background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 0 12px var(--glow)}.meter .pct{font-family:var(--display);font-weight:700;font-size:14px;color:var(--mute);min-width:52px;text-align:end}.ex{background:var(--surface);border:1px solid var(--edge);border-radius:18px;margin-bottom:11px;overflow:hidden}.ex.core{background:#120F16}.ex.done{border-color:rgba(0,232,122,.45)}.ex.open{border-color:var(--accent)}.exh{display:flex;align-items:center;gap:13px;padding:15px;width:100%;text-align:start}.exh .ix{width:30px;height:30px;flex:0 0 auto;border-radius:10px;background:var(--raised);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:13px;color:var(--mute)}.ex.done .exh .ix{background:var(--ok);color:#032B16}.ex.open .exh .ix{background:var(--accent);color:#14030A}.exn{flex:1;min-width:0}.exn b{display:block;font-weight:600;font-size:15.5px;line-height:1.3}.exn em{font-style:normal;display:inline-block;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:var(--glow);color:var(--accent)}.exn em.t2{background:var(--raised);color:var(--dim)}.exs{text-align:end;flex:0 0 auto}.exs b{display:block;font-family:var(--display);font-weight:700;font-size:19px;line-height:1}.exs span{display:block;font-size:10.5px;color:var(--dim);margin-top:4px}.exb{display:none;padding:0 15px 15px}.ex.open .exb{display:block}.stage{position:relative;background:#07080D;border:1px solid var(--edge);border-radius:14px;margin-top:4px;overflow:hidden}.stage svg{display:block;width:100%;height:auto}.stage .ph{position:absolute;left:11px;top:10px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);background:rgba(7,8,13,.86);padding:4px 9px;border-radius:7px}.stage .spd{position:absolute;inset-inline-end:9px;top:9px;font-size:11px;color:var(--mute);background:rgba(7,8,13,.86);padding:5px 10px;border-radius:7px;border:1px solid var(--edge)}.stage .shot{position:relative;aspect-ratio:340/408;background:#05070C;overflow:hidden}
+.stage .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage .shot img.sb{opacity:0;animation:xf 3.6s ease-in-out infinite}
+.stage .pos{position:absolute;left:10px;bottom:10px;z-index:4;font-size:10px;font-weight:800;letter-spacing:.12em;padding:4px 9px;border-radius:999px;background:rgba(3,4,7,.78);backdrop-filter:blur(4px)}
+.stage .pa{color:#8FD6FF;animation:xfa 3.6s ease-in-out infinite}
+.stage .pb{color:#5BE86A;opacity:0;animation:xf 3.6s ease-in-out infinite}
+@keyframes xf{0%,10%{opacity:0}40%,60%{opacity:1}90%,100%{opacity:0}}
+@keyframes xfa{0%,10%{opacity:1}40%,60%{opacity:0}90%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.stage .shot img.sb,.stage .pa,.stage .pb{animation:none}.stage .shot img.sb{opacity:1}.stage .pa{opacity:0}.stage .pb{opacity:1}}
+.stage .clip3d{position:relative;background:#050710}.stage .clip3d img{display:block;width:100%;height:auto}.stage .exttl{position:absolute;z-index:3;left:0;right:0;top:10px;text-align:center;font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#8FD6FF;text-shadow:0 1px 6px rgba(0,0,0,.8);pointer-events:none}.stage .fault-cue{margin:0;padding:9px 12px 11px;font-size:12.5px;line-height:1.5;color:var(--mute);border-top:1px solid var(--edge);background:#0A0C12}.stage .fault-cue b{color:#FF5A47;font-weight:700}.stage .mus-label{position:absolute;z-index:3;left:11px;top:34px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:rgba(7,8,13,.86);padding:4px 9px;border-radius:7px;border:1px solid var(--accent)}
+.stage .hint{position:absolute;left:11px;bottom:9px;font-size:10.5px;color:var(--dim);background:rgba(7,8,13,.86);padding:3px 8px;border-radius:6px}.cue{font-size:13.5px;color:var(--mute);line-height:1.7;margin:13px 0 0}.alt{font-size:12.5px;color:var(--dim);margin:10px 0 0;padding:9px 11px;background:var(--bg);border-radius:9px}.acts{display:flex;gap:8px;margin-top:13px}.act{flex:1;border:1px solid var(--edge);border-radius:11px;padding:11px;font-size:13px;font-weight:600;text-align:center;color:var(--ink);text-decoration:none;display:block;background:var(--raised)}.act:active{opacity:.7}.sets{margin-top:14px;display:flex;flex-direction:column;gap:8px}.srow{display:flex;align-items:center;gap:8px}.srow .tag{min-width:60px;flex:0 0 auto}.srow .tag b{display:block;font-family:var(--display);font-weight:700;font-size:12.5px;color:var(--dim);line-height:1.1}.srow .tag small{display:block;font-size:10px;color:var(--accent);margin-top:2px}.srow input{width:100%;min-width:0;background:var(--raised);border:1.5px solid var(--edge);border-radius:11px;padding:12px 8px;color:var(--ink);font-size:15px;text-align:center;font-variant-numeric:tabular-nums;font-weight:600}.srow input:focus{outline:none;border-color:var(--accent)}.srow .tick{flex:0 0 auto;width:46px;height:46px;border:1.5px solid var(--edge);border-radius:13px;display:grid;place-items:center;color:var(--dim);font-size:17px;background:var(--raised)}.srow.on .tick{background:var(--ok);border-color:var(--ok);color:#032B16}.srow.on input{opacity:.45}.pb{font-size:11px;color:var(--ok);margin-top:9px;font-weight:600}.finish{width:100%;margin-top:20px;border-radius:15px;padding:17px;font-weight:700;font-size:15.5px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#14030A;box-shadow:0 8px 26px var(--glow)}.finish[disabled]{background:var(--raised);color:var(--dim)}.note{background:var(--surface);border:1px solid var(--edge);border-radius:15px;padding:16px;margin:16px 0;font-size:14px;line-height:1.7;border-inline-start:3px solid var(--accent)}.note.ok{border-inline-start-color:var(--ok)}.note p{margin:0 0 11px}.note p:last-child{margin:0}.note b{color:var(--ink)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 18px}.stat{background:var(--surface);border:1px solid var(--edge);border-radius:15px;padding:15px 10px;text-align:center}.stat .v{font-family:var(--display);font-weight:800;font-size:24px;line-height:1}.stat .v small{font-size:12px;font-weight:600}.stat .k{font-size:10.5px;color:var(--dim);margin-top:6px}table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}th{text-align:start;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--dim);padding:0 9px 9px;border-bottom:1px solid var(--edge)}td{padding:12px 9px;border-bottom:1px solid var(--edge);vertical-align:top}tr:last-child td{border-bottom:0}td.n{font-family:var(--display);font-weight:700;font-size:14px;text-align:center;white-space:nowrap}td strong{color:var(--accent)}.list{margin:12px 0;padding:0;list-style:none}.list li{padding:14px 0;border-bottom:1px solid var(--edge);font-size:14px;line-height:1.65;display:flex;gap:13px}.list li:last-child{border-bottom:0}.list .k{font-family:var(--display);font-weight:800;font-size:16px;color:var(--accent);flex:0 0 22px}.list b{display:block;margin-bottom:3px}.macro{display:flex;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--edge)}.macro:last-child{border-bottom:0}.macro .l small{display:block;color:var(--dim);font-size:12px;margin-top:3px}.macro .v{font-family:var(--display);font-weight:700;font-size:19px;white-space:nowrap;padding-inline-start:14px}.macro.key .v{color:var(--accent)}.seg{display:flex;gap:6px;background:var(--raised);border-radius:12px;padding:5px;margin:10px 0 0}.seg button{flex:1;border-radius:9px;padding:10px;font-size:13px;font-weight:600;color:var(--mute)}.seg button.on{background:var(--accent);color:#14030A}.hist{margin:12px 0;padding:0;list-style:none}.hist li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--edge);font-size:13.5px}.hist li:last-child{border-bottom:0}.hist .c{font-family:var(--display);font-weight:700;font-size:12px;padding:4px 9px;border-radius:7px;background:var(--raised);color:var(--mute);min-width:62px;text-align:center}.hist .d{flex:1;color:var(--mute);font-size:12.5px}.hero{background:linear-gradient(150deg,var(--glow),transparent 62%),var(--surface);border:1px solid var(--accent);border-radius:22px;padding:19px 18px 17px;margin:0 0 14px;position:relative}.hero .lab{display:flex;align-items:center;gap:7px;font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}.hero .lab i{width:7px;height:7px;border-radius:99px;background:var(--accent);box-shadow:0 0 0 4px var(--glow)}.hero h1{font-family:var(--display);font-weight:800;font-size:40px;line-height:.98;letter-spacing:-.035em;margin:0 0 9px}body[dir="rtl"] .hero h1{font-family:var(--ar);font-size:30px;letter-spacing:0;line-height:1.3}.hero .meta{font-size:13.5px;color:var(--ink);margin:0 0 3px;font-weight:500}.hero .ago{font-size:12.5px;color:var(--dim);margin:0 0 15px}.hero .go{width:100%;border-radius:15px;padding:17px;font-weight:800;font-size:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#14030A;box-shadow:0 8px 26px var(--glow)}.hero .dots{display:flex;gap:5px;margin:14px 0 0;justify-content:center;align-items:center}.hero .dots i{width:7px;height:7px;border-radius:99px;background:var(--edge);transition:all .3s}.hero .dots i.on{background:var(--accent);width:22px}.hero .dots i.was{background:var(--ok)}.calm{display:flex;gap:9px;align-items:flex-start;background:var(--surface);border:1px solid var(--edge);border-radius:13px;padding:12px 13px;margin:0 0 16px;font-size:12.5px;color:var(--mute);line-height:1.6}.calm b{color:var(--ink);font-weight:600}.calm .ic{flex:0 0 auto;font-size:14px;line-height:1.3}.railwrap .rl{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);padding:0 18px 7px}.install{background:linear-gradient(135deg,var(--glow),transparent 70%);border:1px solid var(--accent);border-radius:16px;padding:16px;margin:0 0 16px;position:relative}.install h4{margin:0 0 4px;font-family:var(--display);font-weight:700;font-size:15px}body[dir="rtl"] .install h4{font-family:var(--ar)}.install p{margin:0;font-size:13px;color:var(--mute);line-height:1.6}.install ol{margin:10px 0 0;padding-inline-start:20px;font-size:13px;color:var(--mute);line-height:1.9}.install .x{position:absolute;top:10px;inset-inline-end:12px;color:var(--dim);font-size:18px;line-height:1}.shareico{display:inline-grid;place-items:center;width:19px;height:19px;border:1.5px solid var(--accent);border-radius:5px;color:var(--accent);font-size:11px;vertical-align:-4px;margin:0 2px}#timer{position:fixed;left:14px;right:14px;bottom:calc(var(--nav-h) + 12px + env(safe-area-inset-bottom));z-index:60;background:var(--raised);border:1px solid var(--accent);border-radius:17px;padding:14px 16px;display:none;align-items:center;gap:14px;box-shadow:0 14px 34px rgba(0,0,0,.6)}#timer.on{display:flex}#timer .ring{position:relative;width:52px;height:52px;flex:0 0 auto}#timer .ring svg{transform:rotate(-90deg)}#timer .ring b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:13px}#timer .w{flex:1;font-size:12.5px;color:var(--mute);line-height:1.4}#timer .w strong{display:block;color:var(--ink);font-size:13.5px;font-weight:600;margin-bottom:2px}#timer button{border:1px solid var(--edge);border-radius:10px;padding:9px 12px;font-size:12.5px;font-weight:600;color:var(--mute)}nav{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(3,4,7,.97);backdrop-filter:blur(16px);border-top:1px solid var(--edge);display:flex;padding-bottom:env(safe-area-inset-bottom)}nav button{flex:1;height:var(--nav-h);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--dim);font-size:10px;font-weight:600}nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}nav button.on{color:var(--accent)}.foot{color:var(--dim);font-size:11.5px;line-height:1.65;margin:34px 0 0;padding-top:16px;border-top:1px solid var(--edge)}@media(prefers-reduced-motion:reduce){*{transition:none!important}}</style>
+<script>
+(function(){try{
+var icon=document.querySelector('link[rel="apple-touch-icon"]').getAttribute('href');
+var m={name:"PPL — Lokman",short_name:"PPL",start_url:".",display:"standalone",
+background_color:"#030407",theme_color:"#030407",orientation:"portrait",
+icons:[{src:icon,sizes:"512x512",type:"image/png",purpose:"any maskable"}]};
+var l=document.createElement('link');l.rel='manifest';
+l.href=URL.createObjectURL(new Blob([JSON.stringify(m)],{type:'application/manifest+json'}));
+document.head.appendChild(l);
+}catch(e){}})();
+</script>
+</head>
+<body>
+<header>
+<div class="hrow">
+<div class="brand">PUSH<i>·</i>PULL<i>·</i>LEGS</div>
+<button class="pill" id="langBtn">عربي</button>
+</div>
+<div class="railwrap"><div class="rl" id="railLabel"></div><div class="rail" id="rail"></div></div>
+</header>
+<main>
+<section class="view on" id="v-train"></section>
+<section class="view" id="v-core"></section>
+<section class="view" id="v-food"></section>
+<section class="view" id="v-plan"></section>
+<section class="view" id="v-you"></section>
+</main>
+<div id="timer">
+<div class="ring">
+<svg width="52" height="52" viewBox="0 0 52 52">
+<circle cx="26" cy="26" r="22" stroke="#262A35" stroke-width="5" fill="none"/>
+<circle id="tArc" cx="26" cy="26" r="22" stroke="var(--accent)" stroke-width="5" fill="none"
+stroke-linecap="round" stroke-dasharray="138.2" stroke-dashoffset="0"/>
+</svg>
+<b class="tnum" id="tVal">0:00</b>
+</div>
+<div class="w"><strong id="tWho"></strong><span id="tSub"></span></div>
+<button id="tAdd">+30</button>
+<button id="tSkip">✕</button>
+</div>
+<nav id="nav"></nav>
+<script>let LANG='en';
+const T=o=>(o&&typeof o==='object'&&!Array.isArray(o))?(o[LANG]??o.en):o;
+const mem={};
+const store={
+get(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){}return mem[k]??null},
+set(k,v){mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+};
+let LOG={},HIST={},JOURNAL=[],POS=0,ROTLEN=5,INSTALLED=false,HIDEINSTALL=false;
+const T1={en:'Priority',ar:'أولوية'},T2={en:'Support',ar:'مساند'};
+const P=(hd,sh,el,ha,hp,kn,ft)=>({hd,sh,el,ha,hp,kn,ft});
+const ANIM={
+machinePress:{prop:'seatBack',track:'ha',sa:0,
+a:P([64,48],[76,64],[90,68],[94,60],[78,98],[102,110],[102,136]),
+b:P([64,48],[76,64],[104,66],[136,64],[78,98],[102,110],[102,136])},
+inclinePress:{prop:'incline',track:'ha',sa:0,
+a:P([84,56],[96,70],[100,64],[98,52],[120,104],[142,116],[160,128]),
+b:P([84,56],[96,70],[98,46],[96,24],[120,104],[142,116],[160,128])},
+shoulderPress:{prop:'seatBack',track:'ha',sa:0,
+a:P([74,42],[80,58],[98,68],[94,48],[82,92],[104,104],[104,132]),
+b:P([74,42],[80,58],[94,42],[92,16],[82,92],[104,104],[104,132])},
+dbShoulder:{prop:'dumbbells',track:'ha',sa:0,
+a:P([74,42],[80,58],[100,70],[96,50],[82,92],[104,104],[104,132]),
+b:P([74,42],[80,58],[96,40],[94,14],[82,92],[104,104],[104,132])},
+pecDeck:{prop:'seatBack',track:'ha',sa:0,
+a:P([76,42],[82,58],[116,54],[148,50],[84,92],[106,104],[106,132]),
+b:P([76,42],[82,58],[106,68],[122,84],[84,92],[106,104],[106,132])},
+cableFly:{prop:'cableSide',track:'ha',sa:0,
+a:P([98,36],[98,54],[126,60],[154,58],[98,96],[98,122],[98,150]),
+b:P([98,36],[98,54],[112,70],[122,88],[98,96],[98,122],[98,150])},
+lateralRaise:{prop:'cableLow',track:'ha',sa:0,
+a:P([100,32],[100,52],[108,72],[110,94],[100,94],[100,120],[100,148]),
+b:P([100,32],[100,52],[128,54],[152,46],[100,94],[100,120],[100,148])},
+dbLateral:{prop:'dumbbells',track:'ha',sa:0,
+a:P([100,32],[100,52],[108,72],[110,94],[100,94],[100,120],[100,148]),
+b:P([100,32],[100,52],[128,54],[152,46],[100,94],[100,120],[100,148])},
+pushdown:{prop:'cableHigh',track:'ha',sa:0,
+a:P([98,34],[98,54],[106,74],[112,56],[98,96],[98,122],[98,148]),
+b:P([98,34],[98,54],[106,74],[114,98],[98,96],[98,122],[98,148])},
+overheadTri:{prop:'cableHigh',track:'ha',sa:1,
+a:P([98,42],[98,60],[96,34],[110,20],[98,98],[98,124],[98,148]),
+b:P([98,42],[98,60],[96,34],[82,44],[98,98],[98,124],[98,148])},
+cableCrunch:{prop:'cableHigh',track:'hd',sa:0,
+a:P([98,54],[98,70],[108,56],[116,40],[96,104],[70,116],[58,138]),
+b:P([110,96],[106,84],[114,70],[120,52],[96,106],[70,116],[58,138])},
+pulldown:{prop:'cableHigh',track:'ha',sa:0,
+a:P([98,58],[98,74],[122,50],[142,28],[98,108],[120,118],[120,148]),
+b:P([98,58],[98,74],[118,82],[128,58],[98,108],[120,118],[120,148])},
+row:{prop:'chestPad',track:'ha',sa:0,
+a:P([70,56],[82,70],[112,76],[144,80],[86,104],[86,130],[86,152]),
+b:P([70,56],[82,70],[120,70],[94,86],[86,104],[86,130],[86,152])},
+seatedRow:{prop:'cableMid',track:'ha',sa:0,
+a:P([88,54],[90,70],[116,76],[146,80],[94,104],[124,114],[150,118]),
+b:P([88,54],[90,70],[100,86],[72,80],[94,104],[124,114],[150,118])},
+pullover:{prop:'cableHigh',track:'ha',sa:0,
+a:P([92,62],[92,78],[108,56],[124,32],[94,108],[72,124],[60,146]),
+b:P([92,62],[92,78],[104,94],[112,118],[94,108],[72,124],[60,146])},
+rearDelt:{prop:'none',track:'ha',sa:0,
+a:P([100,34],[100,54],[114,70],[124,84],[100,96],[100,122],[100,148]),
+b:P([100,34],[100,54],[74,58],[46,50],[100,96],[100,122],[100,148])},
+curl:{prop:'incline',track:'ha',sa:0,
+a:P([62,62],[74,76],[88,98],[98,120],[98,98],[122,110],[144,120]),
+b:P([62,62],[74,76],[88,98],[74,72],[98,98],[122,110],[144,120])},
+cableCurl:{prop:'cableLow',track:'ha',sa:0,
+a:P([98,36],[98,56],[106,78],[112,100],[98,98],[98,124],[98,150]),
+b:P([98,36],[98,56],[106,78],[96,56],[98,98],[98,124],[98,150])},
+shrug:{prop:'dumbbells',track:'sh',sa:0,
+a:P([100,44],[100,64],[120,88],[122,112],[100,100],[100,124],[100,150]),
+b:P([100,36],[100,46],[120,70],[122,94],[100,100],[100,124],[100,150])},
+kneeRaise:{prop:'bar',track:'kn',sa:0,
+a:P([100,52],[100,70],[98,48],[96,26],[100,110],[100,136],[100,158]),
+b:P([100,52],[100,70],[98,48],[96,26],[100,110],[74,112],[58,132])},
+legPress:{prop:'sled',track:'ft',sa:0,
+a:P([34,88],[56,94],[58,112],[56,126],[88,102],[92,72],[116,80]),
+b:P([34,88],[56,94],[58,112],[56,126],[88,102],[114,62],[146,48])},
+hackSquat:{prop:'hackRail',track:'hp',sa:0,
+a:P([74,98],[86,106],[104,112],[118,118],[104,124],[136,116],[142,146]),
+b:P([92,46],[100,60],[114,70],[126,78],[112,84],[136,114],[142,146])},
+legCurl:{prop:'seatBack',track:'ft',sa:0,
+a:P([56,56],[68,70],[84,82],[98,92],[78,100],[118,102],[152,98]),
+b:P([56,56],[68,70],[84,82],[98,92],[78,100],[118,102],[116,136])},
+lyingCurl:{prop:'flatBench',track:'ft',sa:0,
+a:P([32,84],[52,90],[70,100],[88,106],[98,96],[130,98],[162,98]),
+b:P([32,84],[52,90],[70,100],[88,106],[98,96],[130,98],[136,64])},
+legExt:{prop:'seatBack',track:'ft',sa:0,
+a:P([56,56],[68,70],[84,82],[98,92],[78,100],[118,102],[120,134]),
+b:P([56,56],[68,70],[84,82],[98,92],[78,100],[118,102],[154,96])},
+rdl:{prop:'dumbbells',track:'ha',sa:1,
+a:P([100,32],[100,52],[108,72],[110,94],[100,96],[100,122],[100,150]),
+b:P([134,58],[122,66],[128,86],[130,108],[96,98],[92,124],[98,150])},
+calf:{prop:'calfStep',track:'hp',sa:0,
+a:P([100,46],[100,66],[118,88],[120,110],[100,108],[100,130],[100,150]),
+b:P([100,24],[100,44],[118,66],[120,88],[100,86],[100,112],[100,142])},
+seatedCalf:{prop:'calfStep',track:'ft',sa:0,
+a:P([58,54],[70,68],[86,80],[100,90],[80,98],[122,100],[150,128]),
+b:P([58,54],[70,68],[86,80],[100,90],[80,98],[122,100],[150,102])},
+pallof:{prop:'cableSide',track:'ha',sa:0,
+a:P([100,36],[100,54],[86,66],[72,66],[100,96],[100,122],[100,148]),
+b:P([100,36],[100,54],[80,62],[54,58],[100,96],[100,122],[100,148])},
+declineSit:{prop:'decline',track:'hd',sa:0,
+a:P([54,104],[70,98],[78,92],[70,82],[104,84],[128,90],[148,100]),
+b:P([86,60],[92,76],[100,78],[92,64],[104,86],[128,90],[148,100])},
+chop:{prop:'cableSide',track:'ha',sa:0,
+a:P([100,38],[100,56],[118,44],[140,30],[100,96],[100,122],[100,148]),
+b:P([100,38],[100,56],[86,76],[66,98],[100,96],[100,122],[100,148])},
+preacherCurl:{prop:'preacherPad',track:'ha',sa:0,
+a:P([66,48],[80,64],[108,88],[134,102],[84,104],[108,118],[108,146]),
+b:P([66,48],[80,64],[108,88],[118,56],[84,104],[108,118],[108,146])},
+hammerCurl:{prop:'dumbbells',track:'ha',sa:0,
+a:P([100,34],[100,54],[118,80],[122,106],[100,98],[100,124],[100,150]),
+b:P([100,34],[100,54],[118,80],[108,58],[100,98],[100,124],[100,150])},
+inclineOhExt:{prop:'incline',track:'ha',sa:0,
+a:P([84,56],[96,70],[94,46],[76,38],[120,104],[142,116],[160,128]),
+b:P([84,56],[96,70],[94,46],[112,26],[120,104],[142,116],[160,128])},
+abWheel:{prop:'wheel',track:'ha',sa:1,
+a:P([74,94],[88,100],[104,108],[120,114],[70,116],[48,130],[36,142]),
+b:P([104,112],[116,118],[136,122],[158,126],[80,122],[50,132],[38,144])}
+};
+const PROPS={
+none:'',
+seatBack:'<rect x="52" y="52" width="9" height="62" rx="4" fill="#1E222C"/><rect x="48" y="110" width="44" height="9" rx="4" fill="#1E222C"/>',
+flatBench:'<rect x="28" y="98" width="140" height="10" rx="5" fill="#1E222C"/><rect x="44" y="108" width="8" height="34" fill="#1A1E27"/><rect x="146" y="108" width="8" height="34" fill="#1A1E27"/>',
+incline:'<path d="M44 128 L104 42 L116 52 L56 138 Z" fill="#1E222C"/>',
+decline:'<path d="M46 108 L152 60 L158 72 L52 120 Z" fill="#1E222C"/>',
+chestPad:'<rect x="60" y="54" width="10" height="56" rx="5" fill="#1E222C"/><rect x="56" y="108" width="40" height="9" rx="4" fill="#1E222C"/>',
+sled:'<rect x="122" y="36" width="48" height="58" rx="7" fill="#1E222C"/><rect x="26" y="100" width="76" height="10" rx="5" fill="#1E222C"/>',
+hackRail:'<path d="M150 18 L182 18 L182 150 L150 150 Z" fill="#14181F"/><rect x="60" y="146" width="96" height="8" rx="4" fill="#1E222C"/>',
+preacherPad:'<path d="M72 72 L120 110 L132 98 L84 60 Z" fill="#1E222C"/><rect x="88" y="118" width="46" height="9" rx="4" fill="#1E222C"/>',
+calfStep:'<rect x="62" y="148" width="104" height="10" rx="3" fill="#1E222C"/>',
+bar:'<rect x="40" y="18" width="120" height="6" rx="3" fill="#2A2F3C"/>',
+wheel:'<circle cx="160" cy="120" r="13" fill="none" stroke="#2A2F3C" stroke-width="5"/>',
+dumbbells:'',
+cableHigh:'<rect x="148" y="12" width="36" height="130" rx="6" fill="#14181F"/><rect x="154" y="18" width="24" height="7" rx="3" fill="#2A2F3C"/>',
+cableLow:'<rect x="158" y="88" width="34" height="58" rx="6" fill="#14181F"/>',
+cableMid:'<rect x="158" y="52" width="34" height="68" rx="6" fill="#14181F"/>',
+cableSide:'<rect x="164" y="26" width="30" height="118" rx="6" fill="#14181F"/>'
+};
+const CABLE={
+cableHigh:{a:[166,24],stack:[152,56,28,78]},
+cableLow:{a:[175,94],stack:[161,100,28,42]},
+cableMid:{a:[175,60],stack:[161,66,28,50]},
+cableSide:{a:[179,36],stack:[167,44,24,94]}
+};
+const lerp=(a,b,t)=>a+(b-a)*t;
+function poseAt(A,B,t){const o={};for(const k in A){o[k]=[lerp(A[k][0],B[k][0],t),lerp(A[k][1],B[k][1],t)]}return o}
+const dist=(p,q)=>Math.hypot(p[0]-q[0],p[1]-q[1]);
+const SHOTS={"machinePress":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/1.jpg"],"inclinePress":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/1.jpg"],"cableFly":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/1.jpg"],"pecDeck":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/1.jpg"],"shoulderPress":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Shoulder_Press/1.jpg"],"dbShoulder":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shoulder_Press/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shoulder_Press/1.jpg"],"lateralRaise":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Seated_Lateral_Raise/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Seated_Lateral_Raise/1.jpg"],"dbLateral":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/1.jpg"],"overheadTri":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/1.jpg"],"pushdown":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/1.jpg"],"pulldown":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Close-Grip_Front_Lat_Pulldown/1.jpg"],"row":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/T-Bar_Row_with_Handle/1.jpg"],"seatedRow":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/1.jpg"],"pullover":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/1.jpg"],"rearDelt":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/1.jpg"],"curl":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/1.jpg"],"cableCurl":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/1.jpg"],"shrug":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/1.jpg"],"legPress":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/1.jpg"],"hackSquat":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/1.jpg"],"legExt":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/1.jpg"],"legCurl":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/1.jpg"],"lyingCurl":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/1.jpg"],"rdl":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/1.jpg"],"calf":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rocking_Standing_Calf_Raise/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Rocking_Standing_Calf_Raise/1.jpg"],"seatedCalf":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/1.jpg"],"cableCrunch":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/1.jpg"],"kneeRaise":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hanging_Leg_Raise/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hanging_Leg_Raise/1.jpg"],"declineSit":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Sit-Up/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Sit-Up/1.jpg"],"abWheel":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout_-_On_Knees/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Ab_Rollout_-_On_Knees/1.jpg"],"inclineOhExt":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/1.jpg"],"preacherCurl":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Preacher_Curl/1.jpg"],"hammerCurl":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Alternate_Hammer_Curl/1.jpg"],"pallof":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/1.jpg"],"chop":["https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/0.jpg","https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/1.jpg"]};
+const MUSCLE={machinePress:'chest',inclinePress:'chest',pecDeck:'chest',cableFly:'chest',
+shoulderPress:'delt',dbShoulder:'delt',lateralRaise:'delt',dbLateral:'delt',
+pushdown:'triceps',overheadTri:'triceps',inclineOhExt:'triceps',
+pulldown:'lats',row:'lats',seatedRow:'lats',pullover:'lats',
+rearDelt:'rearDelt',shrug:'traps',
+curl:'biceps',cableCurl:'biceps',preacherCurl:'biceps',hammerCurl:'forearm',
+legPress:'quads',hackSquat:'quads',legExt:'quads',
+legCurl:'hams',lyingCurl:'hams',rdl:'hams',
+calf:'calves',seatedCalf:'calves',
+cableCrunch:'abs',kneeRaise:'abs',declineSit:'abs',abWheel:'abs',pallof:'abs',chop:'abs'};
+const MUSNAME={chest:{en:'Chest',ar:'الصدر'},delt:{en:'Side delt',ar:'الدالية الجانبية'},
+triceps:{en:'Triceps',ar:'الترايسبس'},biceps:{en:'Biceps',ar:'البايسبس'},
+forearm:{en:'Brachialis',ar:'العضدية'},lats:{en:'Lats',ar:'الظهر العريض'},
+rearDelt:{en:'Rear delt',ar:'الدالية الخلفية'},traps:{en:'Traps',ar:'الترابيس'},
+abs:{en:'Abs',ar:'البطن'},quads:{en:'Quads',ar:'الفخذ الأمامي'},
+hams:{en:'Hamstrings',ar:'الفخذ الخلفي'},calves:{en:'Calves',ar:'السمانة'}};
+/* which body parts get painted for each muscle */
+const PAINT={biceps:'arm',triceps:'arm',forearm:'arm',delt:'arm',
+chest:'torso',lats:'torso',abs:'torso',traps:'torso',rearDelt:'arm',
+quads:'leg',hams:'leg',calves:'shin'};
+/* the common mistake for each lift + the coaching line */
+const FAULTS={
+swing:{t:{en:'Swinging the body',ar:'تأرجح الجسم'},c:{en:'Keep the torso still — move only the working joint.',ar:'ثبّت الجذع — حرّك المفصل العامل فقط.'}},
+partial:{t:{en:'Half range',ar:'مدى نصفي'},c:{en:'Go all the way down and all the way up. Half reps grow half the muscle.',ar:'انزل بالكامل وارفع بالكامل. التكرار الناقص ينتج نموًا ناقصًا.'}},
+shrug:{t:{en:'Shoulders shrugging',ar:'رفع الكتفين'},c:{en:'Pull the shoulders down away from your ears before every rep.',ar:'اسحب الكتفين للأسفل بعيدًا عن أذنيك قبل كل تكرار.'}},
+drift:{t:{en:'Elbow drifting',ar:'انحراف المرفق'},c:{en:'Pin the elbow in one place. If it travels, the target muscle gets help.',ar:'ثبّت المرفق في مكانه. إذا تحرّك، تشارك عضلات أخرى في الحمل.'}},
+hips:{t:{en:'Pulling with the hips',ar:'السحب بالحوض'},c:{en:'Curl the spine, not the hips. Think ribs toward pelvis.',ar:'اثنِ العمود الفقري لا الحوض. اجعل الأضلاع تقترب من الحوض.'}}};
+const FAULT={machinePress:'partial',inclinePress:'partial',pecDeck:'partial',cableFly:'drift',
+shoulderPress:'partial',dbShoulder:'partial',lateralRaise:'shrug',dbLateral:'shrug',
+pushdown:'drift',overheadTri:'drift',inclineOhExt:'drift',
+pulldown:'swing',row:'swing',seatedRow:'swing',pullover:'drift',
+rearDelt:'swing',shrug:'partial',
+curl:'swing',cableCurl:'swing',preacherCurl:'partial',hammerCurl:'swing',
+legPress:'partial',hackSquat:'partial',legExt:'partial',
+legCurl:'partial',lyingCurl:'partial',rdl:'partial',
+calf:'partial',seatedCalf:'partial',
+cableCrunch:'hips',kneeRaise:'hips',declineSit:'hips',abWheel:'partial',pallof:'swing',chop:'swing'};
+const rad=Math.PI/180;
+const ang=(p,q)=>Math.atan2(q[1]-p[1],q[0]-p[0])*180/Math.PI;
+function unit(p,q){const dx=q[0]-p[0],dy=q[1]-p[1],L=Math.hypot(dx,dy)||1;return[dx/L,dy/L,L]}
+function frontPerp(p,q){const[ux,uy]=unit(p,q);const a=[-uy,ux],b=[uy,-ux];return a[0]>=b[0]?a:b}
+function onSeg(p,q,t,off,side){
+const[ux,uy,L]=unit(p,q),fp=frontPerp(p,q);
+return[p[0]+ux*L*t+fp[0]*off*side,p[1]+uy*L*t+fp[1]*off*side];
+}
+function rotPt(p,o,deg){const r=deg*rad,c=Math.cos(r),s=Math.sin(r),dx=p[0]-o[0],dy=p[1]-o[1];
+return[o[0]+dx*c-dy*s,o[1]+dx*s+dy*c]}
+/* build the wrong-form pose from the correct one */
+function faultPose(p,f){
+const q={};for(const k in p)q[k]=[p[k][0],p[k][1]];
+if(f==='swing'){['hd','sh','el','ha'].forEach(k=>q[k]=rotPt(q[k],q.hp,-13))}
+else if(f==='shrug'){['hd','sh'].forEach(k=>q[k]=[q[k][0],q[k][1]-8]);q.el=[q.el[0],q.el[1]-5]}
+else if(f==='drift'){q.el=[q.el[0]+13,q.el[1]-8]}
+else if(f==='hips'){['hd','sh','el','ha'].forEach(k=>q[k]=rotPt(q[k],q.hp,-9));
+q.kn=[q.kn[0]-5,q.kn[1]+3]}
+return q;
+}
+function cap(p,q,w1,w2){
+const[ux,uy]=unit(p,q),px=-uy,py=ux;
+return`M${(p[0]+px*w1).toFixed(1)} ${(p[1]+py*w1).toFixed(1)}L${(q[0]+px*w2).toFixed(1)} ${(q[1]+py*w2).toFixed(1)}L${(q[0]-px*w2).toFixed(1)} ${(q[1]-py*w2).toFixed(1)}L${(p[0]-px*w1).toFixed(1)} ${(p[1]-py*w1).toFixed(1)}Z`;
+}
+function limb(p,q,w1,w2,fill){
+return`<path d="${cap(p,q,w1,w2)}" fill="${fill}"/><circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="${w1}" fill="${fill}"/><circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="${w2}" fill="${fill}"/>`;
+}
+function torsoPath(sh,hp){
+const[ux,uy,L]=unit(sh,hp),px=-uy,py=ux;
+const stops=[[0,11],[.24,12.6],[.62,8],[1,10.5]],A=[],B=[];
+stops.forEach(([t,w])=>{const cx=sh[0]+ux*L*t,cy=sh[1]+uy*L*t;
+A.push([cx+px*w,cy+py*w]);B.push([cx-px*w,cy-py*w])});
+const pts=A.concat(B.reverse());
+return'M'+pts.map(q=>q[0].toFixed(1)+' '+q[1].toFixed(1)).join('L')+'Z';
+}
+function bandPath(sh,hp,t0,t1,w0,w1){
+const[ux,uy,L]=unit(sh,hp),px=-uy,py=ux,A=[],B=[];
+[[t0,w0],[(t0+t1)/2,(w0+w1)/2+.6],[t1,w1]].forEach(([t,w])=>{
+const cx=sh[0]+ux*L*t,cy=sh[1]+uy*L*t;
+A.push([cx+px*w,cy+py*w]);B.push([cx-px*w,cy-py*w])});
+const pts=A.concat(B.reverse());
+return'M'+pts.map(q=>q[0].toFixed(1)+' '+q[1].toFixed(1)).join('L')+'Z';
+}
+function halfBand(sh,hp,t0,t1,wIn,wOut,side){
+const[ux,uy,L]=unit(sh,hp),fp=frontPerp(sh,hp);
+const px=fp[0]*side,py=fp[1]*side,A=[],B=[];
+[[t0,wIn,wOut],[(t0+t1)/2,wIn,wOut+.8],[t1,wIn,wOut]].forEach(([t,wi,wo])=>{
+const cx=sh[0]+ux*L*t,cy=sh[1]+uy*L*t;
+A.push([cx+px*wo,cy+py*wo]);B.push([cx-px*wi,cy-py*wi])});
+const pts=A.concat(B.reverse());
+return'M'+pts.map(q=>q[0].toFixed(1)+' '+q[1].toFixed(1)).join('L')+'Z';
+}
+const TPATCH={chest:[.01,.40,3,13.4,1],abs:[.44,.92,1,10,1],
+lats:[.06,.62,-2,12.6,-1],traps:[-.08,.17,5,11.6,1]};
+function ell(c,rx,ry,rot,fill,op){
+return`<ellipse cx="${c[0].toFixed(1)}" cy="${c[1].toFixed(1)}" rx="${rx}" ry="${ry}" transform="rotate(${rot.toFixed(1)} ${c[0].toFixed(1)} ${c[1].toFixed(1)})" fill="${fill}"${op!=null?` opacity="${op}"`:''}/>`;
+}
+function arcArrow(pts){
+if(pts.length<2)return'';
+const d='M'+pts.map(q=>q[0].toFixed(1)+' '+q[1].toFixed(1)).join('L');
+const n=pts.length,e=pts[n-1],b=pts[n-2];
+const[ux,uy]=unit(b,e),px=-uy,py=ux,L=9,W=5.2;
+const head=`M${(e[0]+ux*2).toFixed(1)} ${(e[1]+uy*2).toFixed(1)}L${(e[0]-ux*L+px*W).toFixed(1)} ${(e[1]-uy*L+py*W).toFixed(1)}L${(e[0]-ux*L-px*W).toFixed(1)} ${(e[1]-uy*L-py*W).toFixed(1)}Z`;
+return`<path d="${d}" fill="none" stroke="#2E8BFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".16"/>`+
+`<path d="${d}" fill="none" stroke="#6FC8FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5" opacity=".95"/>`+
+`<path d="${head}" fill="#8FD6FF"/>`;
+}
+function contours(p){
+const sp=ang(p.sh,p.hp),ua=ang(p.sh,p.el),fa=ang(p.el,p.ha),th=ang(p.hp,p.kn),sn=ang(p.kn,p.ft);
+const L=(c,rx,ry,r,op)=>ell(c,rx,ry,r,'#7E8A9C',op);
+return L(onSeg(p.sh,p.hp,.30,7.6,1),7.4,.8,sp+90,.30)
++L(onSeg(p.sh,p.hp,.56,6.6,1),6,.7,sp+90,.22)
++L(onSeg(p.sh,p.hp,.70,6.2,1),5.6,.7,sp+90,.22)
++L(onSeg(p.sh,p.hp,.82,5.8,1),5.2,.7,sp+90,.18)
++L(onSeg(p.sh,p.el,.30,3.4,1),4.6,.7,ua,.26)
++L(onSeg(p.el,p.ha,.34,2.6,1),3.8,.6,fa,.22)
++L(onSeg(p.hp,p.kn,.40,5.4,1),7,.9,th,.26)
++L(onSeg(p.hp,p.kn,.66,4.6,1),5.6,.8,th,.20)
++L(onSeg(p.kn,p.ft,.26,3.4,-1),5,.8,sn,.22);
+}
+function dashChain(pts,col){
+return`<polyline points="${pts.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ')}" fill="none" stroke="${col}" stroke-width="2" stroke-dasharray="1.5 4" stroke-linecap="round" opacity=".95"/>`;
+}
+const PANEL_W=200,PANEL_H=180,FY=9;
+function panelBg(i){
+const x=i*PANEL_W;
+return`<g transform="translate(${x} 0)">
+<rect width="${PANEL_W}" height="${PANEL_H}" fill="url(#bgG)"/>
+<ellipse cx="46" cy="6" rx="52" ry="34" fill="#2E6BFF" opacity=".17"/>
+<ellipse cx="150" cy="2" rx="46" ry="28" fill="#2E6BFF" opacity=".12"/>
+<rect y="150" width="${PANEL_W}" height="30" fill="url(#flG)"/>
+<line x1="0" y1="150" x2="${PANEL_W}" y2="150" stroke="#1B2230" stroke-width="1.4"/>
+</g>`;
+}
+function figureSVG(id){
+return `<svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid meet" data-anim="${id}">
+<defs>
+<linearGradient id="bgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121A2B"/><stop offset="1" stop-color="#070A12"/></linearGradient>
+<linearGradient id="flG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171D29"/><stop offset="1" stop-color="#0A0D15"/></linearGradient>
+<linearGradient id="sk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2F5F9"/><stop offset=".55" stop-color="#D4DBE5"/><stop offset="1" stop-color="#A3AEBE"/></linearGradient>
+<linearGradient id="skD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#AEB8C6"/><stop offset="1" stop-color="#737E8E"/></linearGradient>
+<linearGradient id="cl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#303A4F"/><stop offset="1" stop-color="#151A26"/></linearGradient>
+<linearGradient id="hot" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6A4D"/><stop offset="1" stop-color="#E01A0C"/></linearGradient>
+<linearGradient id="good" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7CFF5C"/><stop offset="1" stop-color="#17B80E"/></linearGradient>
+</defs>
+${panelBg(0)}${panelBg(1)}
+<g class="p0"></g><g class="p1"></g>
+<text class="exname" x="200" y="15" fill="#8FD6FF" font-size="11" font-weight="800" text-anchor="middle" font-family="Inter,system-ui" letter-spacing="1.1"></text>
+<line x1="200" y1="0" x2="200" y2="180" stroke="#000" stroke-width="2.5" opacity=".85"/>
+<g transform="translate(176 20)"><circle r="12" fill="#E8203A"/><path d="M-5 -5 L5 5 M5 -5 L-5 5" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></g>
+<g transform="translate(224 20)"><circle r="12" fill="#12C24A"/><path d="M-6 0 L-1.5 4.8 L6 -4.6" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text class="lbl0" x="100" y="168" fill="#FF5A47" font-size="10.5" font-weight="700" text-anchor="middle" font-family="Inter,system-ui" letter-spacing=".5"></text>
+<text class="lbl1" x="300" y="168" fill="#5BE86A" font-size="10.5" font-weight="700" text-anchor="middle" font-family="Inter,system-ui" letter-spacing=".5"></text>
+</svg>`;
+}
+function drawFigure(p,mus,hotId,prop,cableInfo,arcPts){
+const o=(q,dx,dy)=>[q[0]+dx,q[1]+dy];
+const kind=mus?PAINT[mus]:null;
+const armHot=kind==='arm',legHot=kind==='leg',shinHot=kind==='shin',torsoHot=kind==='torso';
+let s=`<g transform="translate(0 ${FY})">`;
+s+=PROPS[prop]||'';
+/* contact shadow */
+s+=`<ellipse cx="${p.ft[0].toFixed(1)}" cy="146" rx="26" ry="4.5" fill="#000" opacity=".45"/>`;
+/* far side */
+s+=limb(o(p.sh,-7,3),o(p.el,-7,3),6,5,'url(#skD)')+limb(o(p.el,-7,3),o(p.ha,-7,3),5,3.8,'url(#skD)')+
+limb(o(p.hp,-7,2),o(p.kn,-7,2),9.5,6.8,'url(#skD)')+limb(o(p.kn,-7,2),o(p.ft,-7,2),6.8,4.2,'url(#skD)');
+/* near legs */
+s+=limb(p.hp,p.kn,11,7.5,legHot?hotId:'url(#sk)')+limb(p.kn,p.ft,7.5,4.5,shinHot?hotId:'url(#sk)');
+/* shorts */
+s+=`<path d="${bandPath(p.sh,p.hp,.70,1.06,9.6,12.4)}" fill="url(#cl)"/>`;
+s+=`<path d="${cap(p.hp,[p.hp[0]+(p.kn[0]-p.hp[0])*.42,p.hp[1]+(p.kn[1]-p.hp[1])*.42],11.8,10)}" fill="url(#cl)"/>`;
+/* torso */
+s+=`<path d="${torsoPath(p.sh,p.hp)}" fill="url(#sk)"/>`;
+/* crop top */
+s+=`<path d="${bandPath(p.sh,p.hp,-.03,.42,11.6,12.9)}" fill="url(#cl)"/>`;
+/* muscle patch sits on top so it is never hidden by clothing */
+if(torsoHot){const[t0,t1,wi,wo,sd]=TPATCH[mus];
+s+=`<path d="${halfBand(p.sh,p.hp,t0,t1,wi,wo,sd)}" fill="${hotId}"/>`;}
+/* neck + head */
+s+=limb(p.hd,p.sh,4.6,6,'url(#sk)');
+s+=`<ellipse cx="${p.hd[0].toFixed(1)}" cy="${p.hd[1].toFixed(1)}" rx="8" ry="9.4" transform="rotate(${(ang(p.sh,p.hd)+90).toFixed(1)} ${p.hd[0].toFixed(1)} ${p.hd[1].toFixed(1)})" fill="url(#sk)"/>`;
+/* near arms */
+s+=limb(p.sh,p.el,7,5.4,armHot?hotId:'url(#sk)')+limb(p.el,p.ha,5.4,4,armHot?hotId:'url(#sk)');
+s+=contours(p);
+/* guide line along the working chain */
+const gcol=hotId==='url(#hot)'?'#FFC9BE':'#CDFFC2';
+if(armHot)s+=dashChain([p.sh,p.el,p.ha],gcol);
+else if(legHot)s+=dashChain([p.hp,p.kn],gcol);
+else if(shinHot)s+=dashChain([p.kn,p.ft],gcol);
+else if(torsoHot)s+=dashChain([p.sh,p.hp],gcol);
+/* equipment */
+let gear='';
+if(cableInfo){const{C}=cableInfo,d=dist(p.ha,C.a);
+const f=cableInfo.max>cableInfo.min?(d-cableInfo.min)/(cableInfo.max-cableInfo.min):0;
+gear+=`<line x1="${p.ha[0].toFixed(1)}" y1="${p.ha[1].toFixed(1)}" x2="${C.a[0]}" y2="${C.a[1]}" stroke="#5A6576" stroke-width="2.2"/>`;
+const[sx,sy,sw,shh]=C.stack,lift=shh*.42*f,ph=7,n=Math.floor((shh-6)/ph);
+for(let i=0;i<n;i++){const y=sy+shh-ph*(i+1)-lift;
+gear+=`<rect x="${sx}" y="${y.toFixed(1)}" width="${sw}" height="${ph-1.6}" rx="2" fill="#3C4452"/>`}}
+if(prop==='dumbbells'){const w=10,hg=13,q=p.ha;
+gear+=`<rect x="${(q[0]-w/2).toFixed(1)}" y="${(q[1]-hg/2).toFixed(1)}" width="${w}" height="${hg}" rx="2.5" fill="#8E99AA"/>`+
+`<rect x="${(q[0]-w/2-3.5).toFixed(1)}" y="${(q[1]-hg/2-2.5).toFixed(1)}" width="3.5" height="${hg+5}" rx="1.6" fill="#D2D8E3"/>`+
+`<rect x="${(q[0]+w/2).toFixed(1)}" y="${(q[1]-hg/2-2.5).toFixed(1)}" width="3.5" height="${hg+5}" rx="1.6" fill="#D2D8E3"/>`}
+if(prop==='bar')gear+=`<circle cx="${p.ha[0].toFixed(1)}" cy="${p.ha[1].toFixed(1)}" r="4.5" fill="#D2D8E3"/>`;
+if(prop==='wheel')gear+=`<circle cx="${(p.ha[0]+8).toFixed(1)}" cy="${(p.ha[1]+9).toFixed(1)}" r="11" fill="none" stroke="#8E99AA" stroke-width="4"/>`;
+return s+gear+(arcPts?arcArrow(arcPts):'')+'</g>';
+}
+const anims=new Set();
+function mountAnim(host,key){
+const def=ANIM[key]; if(!def) return null;
+const svg=host.querySelector('svg');
+const g={p0:svg.querySelector('.p0'),p1:svg.querySelector('.p1')};
+let cr=null;const C=CABLE[def.prop];
+if(C){const d0=dist(def.a.ha,C.a),d1=dist(def.b.ha,C.a);
+cr={C,min:Math.min(d0,d1),max:Math.max(d0,d1)}}
+const fk=FAULT[key]||'partial';
+const rec={svg,def,g,cr,t0:performance.now(),speed:1,host,fault:fk,
+mus:MUSCLE[key]||null,ph:host.querySelector('.ph')};
+const ml=host.querySelector('.mus-label');
+if(ml&&rec.mus) ml.textContent=T(MUSNAME[rec.mus]);
+const nm=svg.querySelector('.exname');
+if(nm&&host._exname)nm.textContent=host._exname.toUpperCase();
+const l0=svg.querySelector('.lbl0'),l1=svg.querySelector('.lbl1');
+if(l0)l0.textContent=T(FAULTS[fk].t).toUpperCase();
+if(l1)l1.textContent=T(_RW).toUpperCase();
+const fc=host.querySelector('.fault-cue');
+if(fc)fc.innerHTML='<b>'+esc(T(FAULTS[fk].t))+'</b> — '+esc(T(FAULTS[fk].c));
+anims.add(rec);drawAnim(rec,0);return rec;
+}
+function drawAnim(rec,t){
+const{def,g,cr,fault}=rec;
+const good=poseAt(def.a,def.b,t);
+const bad=faultPose(poseAt(def.a,def.b,fault==='partial'?.34+t*.36:t),fault);
+const cab=p=>cr?{C:cr.C,min:cr.min,max:cr.max}:null;
+const tk=def.track||'ha',pts=[];
+for(let i=0;i<=12;i++){const q=poseAt(def.a,def.b,i/12)[tk];pts.push(q)}
+const badPts=[];
+for(let i=0;i<=12;i++){const u=.34+(i/12)*.36;badPts.push(faultPose(poseAt(def.a,def.b,u),fault)[tk])}
+g.p0.innerHTML=drawFigure(bad,rec.mus,'url(#hot)',def.prop,cab(),badPts);
+g.p1.setAttribute('transform','translate(200 0)');
+g.p1.innerHTML=drawFigure(good,rec.mus,'url(#good)',def.prop,cab(),pts);
+}
+const _RW={en:'Correct',ar:'الصحيح'};
+const PHASE={stretch:{en:'stretch',ar:'تمدد'},squeeze:{en:'squeeze',ar:'انقباض'}};
+function tickAnims(now){
+anims.forEach(r=>{
+if(!document.body.contains(r.host)){anims.delete(r);return}
+const per=2400/r.speed, ph=((now-r.t0)%per)/per;
+const raw=ph<.5?ph*2:(1-ph)*2;
+const t=raw*raw*(3-2*raw);
+drawAnim(r,t);
+if(r.ph){
+const sa=r.def.sa||0;
+const atStretch = sa===0 ? t<.5 : t>=.5;
+const want=T(atStretch?PHASE.stretch:PHASE.squeeze);
+if(r.ph.textContent!==want) r.ph.textContent=want;
+}
+});
+requestAnimationFrame(tickAnims);
+}
+requestAnimationFrame(tickAnims);
+const E={
+machineChest:{n:{en:'Machine chest press',ar:'ضغط صدر على الجهاز'},sets:4,reps:'8–10',rest:120,tier:2,anim:'machinePress',
+cue:{en:'Set the seat so the handles sit level with the middle of your chest. Press until the arms are nearly straight, then take two full seconds to come back until you feel the chest pull apart. That slow return is the half that builds the muscle.',
+ar:'اضبط المقعد بحيث تكون المقابض بمستوى منتصف الصدر. ادفع حتى تكاد الذراعان تستقيمان، ثم خذ ثانيتين كاملتين في العودة حتى تشعر بالصدر يتمدد. هذه العودة البطيئة هي النصف الذي يبني العضلة.'},
+alt:{en:'Flat dumbbell press',ar:'ضغط دمبل مستوٍ'},q:'machine chest press proper form seat height'},
+inclineDB:{n:{en:'Incline dumbbell press',ar:'ضغط دمبل مائل'},sets:3,reps:'10–12',rest:120,tier:2,anim:'inclinePress',
+cue:{en:'Bench at 30 degrees — any steeper and it turns into a shoulder exercise. Lower until the dumbbells are level with your chest and you feel the stretch, then press without clanging them together at the top.',
+ar:'البنش على ٣٠ درجة — أي زاوية أعلى تحوّله لتمرين كتف. انزل حتى تصبح الدمبلز بمستوى صدرك وتشعر بالتمدد، ثم ادفع بدون أن تصطدم ببعضها في الأعلى.'},
+alt:{en:'Incline machine press',ar:'جهاز ضغط مائل'},q:'incline dumbbell press 30 degrees proper form'},
+inclineMachine:{n:{en:'Incline machine press',ar:'ضغط مائل على الجهاز'},sets:3,reps:'10–12',rest:120,tier:2,anim:'machinePress',
+cue:{en:'A machine here on purpose — after the shoulder work you want stability, not a balance challenge. Two-second controlled negative on every rep.',
+ar:'الجهاز مقصود هنا — بعد عمل الأكتاف تحتاج ثباتاً لا تحدي توازن. نزول محكوم في ثانيتين في كل تكرار.'},
+alt:{en:'Incline dumbbell press, lighter',ar:'ضغط دمبل مائل أخف'},q:'incline machine chest press proper form'},
+cableFly:{n:{en:'Cable flye',ar:'رفرفة كيبل'},sets:3,reps:'12–15',rest:75,tier:2,anim:'cableFly',
+cue:{en:'Let the arms travel back until you feel a real stretch across the chest, then bring them together and hold a full second. The stretch at the back of the movement is the point of this exercise — do not shorten it to chase weight.',
+ar:'دع الذراعين تعودان للخلف حتى تشعر بتمدد حقيقي في الصدر، ثم اجمعهما واثبت ثانية كاملة. التمدد في نهاية الحركة هو الهدف من هذا التمرين — لا تقصّره لتزيد الوزن.'},
+alt:{en:'Pec deck',ar:'بيك ديك'},q:'cable fly chest stretch proper form'},
+pecDeck:{n:{en:'Pec deck',ar:'بيك ديك'},sets:3,reps:'12–15',rest:75,tier:2,anim:'pecDeck',
+cue:{en:'Open wide until the chest pulls, then squeeze the handles together and hold a second. Keep the elbows at a fixed soft bend throughout.',
+ar:'افتح عريضاً حتى تشعر بشدّ الصدر، ثم اعصر المقبضين معاً واثبت ثانية. أبقِ المرفقين بانحناء بسيط ثابت طوال الحركة.'},
+alt:{en:'Cable crossover',ar:'كروس أوفر'},q:'pec deck proper form chest stretch'},
+machineShoulder:{n:{en:'Machine shoulder press',ar:'ضغط كتف على الجهاز'},sets:3,reps:'10–12',rest:120,tier:2,anim:'shoulderPress',
+cue:{en:'Set the seat so the handles start at ear level. Press up and slightly inward. A machine instead of a standing barbell press — the same result for the shoulders with none of the balance or lower-back cost.',
+ar:'اضبط المقعد لتبدأ المقابض عند مستوى الأذن. ادفع لأعلى وللداخل قليلاً. جهاز بدل الضغط الواقف بالبار — نفس النتيجة للكتف بدون كلفة التوازن ولا أسفل الظهر.'},
+alt:{en:'Seated dumbbell press',ar:'ضغط دمبل جالساً'},q:'machine shoulder press proper form seated'},
+dbShoulder:{n:{en:'Seated dumbbell shoulder press',ar:'ضغط كتف دمبل جالساً'},sets:4,reps:'8–10',rest:120,tier:2,anim:'dbShoulder',
+cue:{en:'Back rest at about 80 degrees, not bolt upright. Start with the dumbbells at ear height and press up and slightly together.',
+ar:'مسند الظهر على ٨٠ درجة تقريباً وليس عمودياً تماماً. ابدأ والدمبلز بمستوى الأذن وادفع لأعلى وللداخل قليلاً.'},
+alt:{en:'Machine shoulder press',ar:'جهاز ضغط الكتف'},q:'seated dumbbell shoulder press proper form'},
+cableLat:{n:{en:'Cable lateral raise, one arm',ar:'رفرفة جانبية كيبل بذراع'},sets:4,reps:'12–15',rest:75,tier:1,anim:'lateralRaise',
+cue:{en:'The single most valuable exercise in your week. Cable on the lowest setting, stand side-on and lean away a little. Raise to shoulder height leading with the elbow. Light weight — if you swing, it is too heavy.',
+ar:'أهم تمرين في أسبوعك كله. الكيبل على أدنى وضع، قف جانبياً ومِل قليلاً بعيداً. ارفع حتى مستوى الكتف وقُد بالمرفق. وزن خفيف — إذا تأرجحت فالوزن ثقيل.'},
+alt:{en:'Machine lateral raise',ar:'جهاز الرفرفة الجانبية'},q:'cable lateral raise one arm proper form side delts'},
+dbLat:{n:{en:'Dumbbell lateral raise',ar:'رفرفة جانبية دمبل'},sets:4,reps:'12–15',rest:75,tier:1,anim:'dbLateral',
+cue:{en:'Slight forward lean, pinkie edge marginally high, stop at shoulder height. Side delts recover fast, which is why they show up four times across the rotation — this is the muscle that actually widens your frame.',
+ar:'ميلة بسيطة للأمام، حافة الخنصر أعلى قليلاً، وتوقف عند مستوى الكتف. الدالية الجانبية تستشفي بسرعة، لذلك تتكرر أربع مرات في الدورة — هذه العضلة هي التي توسّع هيكلك فعلاً.'},
+alt:{en:'Machine lateral raise',ar:'جهاز الرفرفة الجانبية'},q:'dumbbell lateral raise proper form side delts'},
+latBonus:{n:{en:'Cable lateral raise',ar:'رفرفة جانبية كيبل'},sets:3,reps:'15–20',rest:60,tier:1,anim:'lateralRaise',
+cue:{en:'Delt bonus on a leg day, and it is deliberate. Side delts recover faster than almost any muscle and respond to frequency, so three light sets here cost you nothing and add up fast over a rotation.',
+ar:'إضافة للأكتاف في يوم أرجل، وهي مقصودة. الدالية الجانبية تستشفي أسرع من معظم العضلات وتستجيب للتكرار، فثلاث مجموعات خفيفة هنا لا تكلفك شيئاً وتتراكم بسرعة عبر الدورة.'},
+alt:{en:'Machine lateral raise',ar:'جهاز الرفرفة الجانبية'},q:'cable lateral raise side delt form'},
+ohTri:{n:{en:'Overhead rope triceps extension',ar:'تمديد ترايسبس بالحبل خلف الرأس'},sets:4,reps:'10–12',rest:90,tier:1,anim:'overheadTri',
+cue:{en:'Face away from the stack with the rope behind your head, elbows narrow and pointed forward. The long head of the triceps only grows from this stretched overhead position — a pushdown alone will never reach it.',
+ar:'أدر ظهرك للجهاز والحبل خلف رأسك، والمرفقان قريبان ومتجهان للأمام. الرأس الطويلة للترايسبس لا تنمو إلا من هذه الوضعية الممدودة فوق الرأس — الدفع لأسفل وحده لن يصل إليها أبداً.'},
+alt:{en:'Incline dumbbell overhead extension',ar:'تمديد دمبل خلف الرأس على بنش مائل'},q:'overhead rope tricep extension long head form'},
+pushdown:{n:{en:'Rope triceps pushdown',ar:'دفع ترايسبس بالحبل'},sets:3,reps:'12–15',rest:75,tier:1,anim:'pushdown',
+cue:{en:'Elbows pinned at your sides, push down and spread the rope apart at the bottom. Take the last set to failure.',
+ar:'المرفقان مثبتان بجانبك، ادفع لأسفل وافتح الحبل في النهاية. خذ آخر مجموعة حتى الفشل.'},
+alt:{en:'Machine triceps extension',ar:'جهاز تمديد الترايسبس'},q:'rope tricep pushdown proper form'},
+pulldown:{n:{en:'Lat pulldown, shoulder-width grip',ar:'سحب أمامي بقبضة بعرض الكتفين'},sets:4,reps:'8–10',rest:120,tier:1,anim:'pulldown',
+cue:{en:'Hands about shoulder-width, palms forward. Very wide grips do not build wider lats — the research is clear and most people in the gym get this wrong. Lean back slightly, pull to your upper chest, and let the arms stretch all the way up between reps.',
+ar:'اليدان بعرض الكتفين تقريباً والكفان للأمام. القبضات الواسعة جداً لا تبني ظهراً أعرض — الأبحاث واضحة ومعظم الناس في الصالة يخطئون في هذا. مِل للخلف قليلاً واسحب لأعلى صدرك، ودع الذراعين تتمددان بالكامل بين التكرارات.'},
+alt:{en:'Assisted pull-up machine',ar:'جهاز العقلة بمساعدة'},q:'lat pulldown grip width medium grip lat activation form'},
+neutralPulldown:{n:{en:'Neutral-grip pulldown',ar:'سحب أمامي بقبضة محايدة'},sets:3,reps:'10–12',rest:120,tier:1,anim:'pulldown',
+cue:{en:'Palms facing each other. This is the kindest vertical pull for the shoulder joint and it still loads the lats hard. Full stretch overhead on every rep.',
+ar:'الكفان متقابلان. هذا أرحم سحب عمودي على مفصل الكتف ومع ذلك يحمّل الظهر بقوة. تمدد كامل فوق الرأس في كل تكرار.'},
+alt:{en:'Assisted chin-up machine',ar:'جهاز العقلة بمساعدة'},q:'neutral grip lat pulldown proper form'},
+chestRow:{n:{en:'Chest-supported machine row',ar:'تجديف جهاز بدعم الصدر'},sets:4,reps:'10–12',rest:120,tier:1,anim:'row',
+cue:{en:'Chest flat against the pad. The pad removes every bit of cheating and your lower back does nothing at all, which matters a lot when you are training five or six times a week. Pull to the lower ribs and squeeze for one second.',
+ar:'الصدر ملتصق بالوسادة. الوسادة تمنع أي غش وأسفل ظهرك لا يعمل إطلاقاً، وهذا مهم جداً عند التدريب خمس أو ست مرات أسبوعياً. اسحب لأسفل الأضلاع واعصر ثانية واحدة.'},
+alt:{en:'Seated cable row',ar:'تجديف كيبل جالساً'},q:'chest supported machine row proper form'},
+seatedRow:{n:{en:'Seated cable row, neutral grip',ar:'تجديف كيبل جالساً بقبضة محايدة'},sets:4,reps:'10–12',rest:120,tier:1,anim:'seatedRow',
+cue:{en:'Sit tall and do not rock backwards to move the weight. Pull the handle to your belly button with the elbows brushing your sides, squeeze one second, then let the arms stretch all the way forward again.',
+ar:'اجلس مستقيماً ولا تتمايل للخلف لتحريك الوزن. اسحب المقبض إلى سرتك والمرفقان يلامسان جانبيك، اعصر ثانية، ثم دع الذراعين تتمددان للأمام بالكامل مرة أخرى.'},
+alt:{en:'Chest-supported machine row',ar:'تجديف جهاز بدعم الصدر'},q:'seated cable row neutral grip proper form'},
+pullover:{n:{en:'Single-arm cable pullover',ar:'بولوفر كيبل بذراع واحدة'},sets:3,reps:'12–15',rest:75,tier:1,anim:'pullover',
+cue:{en:'Cable set high, half-kneeling, arm almost straight with a small fixed bend at the elbow. Pull the handle down past your hip in a wide arc. One arm at a time gives you a longer range and a far harder stretch than the two-arm version.',
+ar:'الكيبل عالياً، نصف ركوع، والذراع شبه مستقيمة بانحناء بسيط ثابت في المرفق. اسحب المقبض بقوس واسع حتى يتجاوز الورك. ذراع واحدة تعطيك مدى أطول وتمدداً أقوى بكثير من نسخة الذراعين.'},
+alt:{en:'Two-arm rope pullover',ar:'بولوفر بالحبل بالذراعين'},q:'single arm cable lat pullover kneeling form'},
+rearPec:{n:{en:'Reverse pec deck',ar:'رفرفة خلفية على الجهاز'},sets:3,reps:'15–20',rest:60,tier:2,anim:'rearDelt',
+cue:{en:'Rear delts and posture. Arms almost straight, open wide, squeeze the shoulder blades together. Light weight always — this is never a strength exercise.',
+ar:'الدالية الخلفية ووضعية الجسم. الذراعان شبه مستقيمتين، افتح عريضاً، واعصر لوحي الكتف معاً. وزن خفيف دائماً — هذا ليس تمرين قوة أبداً.'},
+alt:{en:'Face pull on the rope',ar:'فيس بُل بالحبل'},q:'reverse pec deck rear delt proper form'},
+rearCable:{n:{en:'Cable rear delt flye',ar:'رفرفة خلفية بالكيبل'},sets:3,reps:'15–20',rest:60,tier:2,anim:'rearDelt',
+cue:{en:'Cables crossed at shoulder height, pull apart and back. Rear delts are the most undertrained muscle on most lifters and they are what finishes off the round, three-dimensional shoulder.',
+ar:'الكيبلات متقاطعة بمستوى الكتف، افتح للخارج والخلف. الدالية الخلفية أكثر عضلة مهمَلة عند معظم المتدربين وهي التي تكمل شكل الكتف المستدير ثلاثي الأبعاد.'},
+alt:{en:'Reverse pec deck',ar:'جهاز الرفرفة الخلفية'},q:'cable rear delt fly proper form'},
+inclineCurl:{n:{en:'Incline dumbbell curl',ar:'بايسبس دمبل على بنش مائل'},sets:4,reps:'10–12',rest:90,tier:1,anim:'curl',
+cue:{en:'Bench at 45 degrees with the arms hanging straight down behind your body. That hanging position is exactly what makes this better than a standing curl — it holds the biceps under load in its longest position.',
+ar:'البنش على ٤٥ درجة والذراعان متدليتان مستقيمتين خلف جسمك. هذا التدلي هو بالضبط ما يجعله أفضل من البايسبس واقفاً — يُبقي البايسبس تحت الحمل في أطول وضعية له.'},
+alt:{en:'Bayesian cable curl',ar:'بايسبس كيبل من الخلف'},q:'incline dumbbell curl proper form biceps stretch'},
+cableCurl:{n:{en:'Cable curl',ar:'بايسبس كيبل'},sets:3,reps:'12–15',rest:75,tier:1,anim:'cableCurl',
+cue:{en:'Cable rather than dumbbells, because the tension never drops off at the top the way it does with a free weight. Keep the elbows still at your sides and squeeze hard for a full second at the top of every rep.',
+ar:'كيبل بدل الدمبل، لأن الشدّ لا يسقط أبداً في الأعلى كما يحدث مع الوزن الحر. أبقِ المرفقين ثابتين بجانبك واعصر بقوة ثانية كاملة في أعلى كل تكرار.'},
+alt:{en:'EZ-bar curl',ar:'بايسبس بالبار المتعرج'},q:'cable curl proper form constant tension biceps'},
+shrug:{n:{en:'Dumbbell shrug',ar:'هز أكتاف بالدمبل'},sets:3,reps:'12–15',rest:75,tier:2,anim:'shrug',
+cue:{en:'Straight up, hold two seconds at the top, straight back down. No rolling — rolling the shoulders does nothing useful and only irritates the joint.',
+ar:'لأعلى مباشرة، اثبت ثانيتين في الأعلى، ثم لأسفل مباشرة. بدون تدوير — تدوير الكتف لا يفيد بشيء ولا يسبب إلا إزعاج المفصل.'},
+alt:{en:'Cable or machine shrug',ar:'هز أكتاف بالكيبل أو الجهاز'},q:'dumbbell shrug proper form traps'},
+legPress:{n:{en:'Leg press',ar:'ضغط أرجل'},sets:4,reps:'10–12',rest:150,tier:2,anim:'legPress',
+cue:{en:'Feet shoulder-width in the middle of the platform. Bring the knees as far toward your chest as you can without the lower back rounding off the pad, then press without slamming the knees straight.',
+ar:'القدمان بعرض الكتفين في منتصف المنصة. قرّب الركبتين من صدرك بأقصى ما تستطيع بدون أن يتقوس أسفل ظهرك عن الوسادة، ثم ادفع بدون قفل الركبتين بعنف.'},
+alt:{en:'Hack squat',ar:'هاك سكوات'},q:'leg press proper form depth foot placement'},
+hackSquat:{n:{en:'Hack squat',ar:'هاك سكوات'},sets:3,reps:'10–12',rest:150,tier:2,anim:'hackSquat',
+cue:{en:'The machine holds your torso for you, so you can go deeper under load than you safely could with a barbell. Descend until the thighs pass parallel, drive up without locking the knees hard.',
+ar:'الجهاز يثبّت جذعك بدلاً عنك، فتستطيع النزول أعمق تحت الحمل مما يمكنك بأمان مع البار. انزل حتى يتجاوز الفخذ الموازاة، وادفع لأعلى بدون قفل الركبتين بقوة.'},
+alt:{en:'Leg press, feet low on the platform',ar:'ضغط أرجل بقدمين منخفضتين'},q:'hack squat proper form depth quads'},
+legExt:{n:{en:'Leg extension',ar:'تمديد أرجل'},sets:3,reps:'12–15',rest:75,tier:2,anim:'legExt',
+cue:{en:'Pause one second at the top of every rep. Simple, safe, and it lets you finish the quads off without any of the whole-body fatigue a squat would cost you.',
+ar:'اثبت ثانية في أعلى كل تكرار. بسيط وآمن ويتيح لك إنهاء الفخذ بدون أي إرهاق عام كالذي يكلفك إياه السكوات.'},
+alt:{en:'Sissy squat',ar:'سيسي سكوات'},q:'leg extension proper form quads pause'},
+seatedCurl:{n:{en:'Seated leg curl',ar:'ثني أرجل جالساً'},sets:3,reps:'10–12',rest:90,tier:2,anim:'legCurl',
+cue:{en:'Seated beats lying here, and the research backs it: sitting flexes the hip, which holds the hamstrings in a longer stretch and produces measurably more growth. Lower over three slow seconds.',
+ar:'الجالس أفضل من المستلقي هنا، والأبحاث تدعم ذلك: الجلوس يثني الورك فيُبقي الخلفية في تمدد أطول وينتج نمواً أكبر بشكل ملموس. انزل في ثلاث ثوانٍ بطيئة.'},
+alt:{en:'Lying leg curl',ar:'ثني أرجل مستلقياً'},q:'seated leg curl vs lying hamstring stretch research'},
+lyingCurl:{n:{en:'Lying leg curl',ar:'ثني أرجل مستلقياً'},sets:3,reps:'12–15',rest:75,tier:2,anim:'lyingCurl',
+cue:{en:'Hips pressed flat into the pad — do not let them lift as you curl. Squeeze hard at the top and lower slowly.',
+ar:'الوركان مضغوطان على الوسادة — لا تدعهما يرتفعان أثناء الثني. اعصر بقوة في الأعلى وانزل ببطء.'},
+alt:{en:'Seated leg curl',ar:'ثني أرجل جالساً'},q:'lying leg curl proper form hamstrings'},
+rdl:{n:{en:'Dumbbell Romanian deadlift',ar:'رفعة رومانية بالدمبل'},sets:4,reps:'10–12',rest:120,tier:2,anim:'rdl',
+cue:{en:'Dumbbells rather than a barbell — much easier to learn and far kinder to the lower back. Push the hips backwards, keep the dumbbells grazing your legs, and stop the moment the hamstring stretch runs out, usually around mid-shin.',
+ar:'دمبل بدل البار — أسهل بكثير في التعلم وأرحم لأسفل الظهر. ادفع الوركين للخلف، وأبقِ الدمبلز ملامسة لرجليك، وتوقف لحظة انتهاء تمدد الخلفية، عادة حول منتصف الساق.'},
+alt:{en:'45° back extension holding a plate',ar:'تمديد ظهر ٤٥ درجة مع قرص'},q:'dumbbell romanian deadlift proper form hip hinge'},
+calf:{n:{en:'Standing calf raise',ar:'رفع سمانة واقفاً'},sets:4,reps:'12–15',rest:60,tier:2,anim:'calf',
+cue:{en:'Let the heel sink all the way down for a full stretch, then squeeze for two seconds at the top. Calves need range of motion far more than they need weight.',
+ar:'دع الكعب ينزل بالكامل للحصول على تمدد كامل، ثم اعصر ثانيتين في الأعلى. السمانة تحتاج مدى الحركة أكثر بكثير مما تحتاج الوزن.'},
+alt:{en:'Calf press on the leg press sled',ar:'ضغط سمانة على منصة ضغط الأرجل'},q:'standing calf raise proper form full range of motion'},
+seatedCalfR:{n:{en:'Seated calf raise',ar:'رفع سمانة جالساً'},sets:4,reps:'15–20',rest:60,tier:2,anim:'seatedCalf',
+cue:{en:'Seated bends the knee, which targets the soleus underneath the main calf muscle. Different muscle from the standing version, which is why both are in the rotation. Full stretch at the bottom.',
+ar:'الجلوس يثني الركبة فيستهدف العضلة النعلية تحت السمانة الرئيسية. عضلة مختلفة عن نسخة الوقوف، ولهذا كلتاهما في الدورة. تمدد كامل في الأسفل.'},
+alt:{en:'Calf press on the leg press',ar:'ضغط سمانة على جهاز الأرجل'},q:'seated calf raise soleus proper form'},
+cableCrunch:{n:{en:'Cable crunch',ar:'كرنش كيبل'},sets:3,reps:'12–15',rest:60,tier:1,anim:'cableCrunch',
+cue:{en:'Kneel facing the stack with the rope at your forehead. Curl the ribs down toward the hips and keep the hips completely still. Add weight every week rather than adding reps.',
+ar:'اركع مواجهاً الجهاز والحبل عند جبهتك. لُف الأضلاع نحو الوركين وأبقِ الوركين ثابتين تماماً. زد الوزن كل أسبوع بدل زيادة التكرارات.'},
+alt:{en:'Machine crunch',ar:'جهاز الكرنش'},q:'cable crunch proper form weighted abs'},
+kneeRaise:{n:{en:'Hanging knee raise',ar:'رفع ركبتين معلقاً'},sets:3,reps:'12–15',rest:60,tier:1,anim:'kneeRaise',
+cue:{en:'Hang from the bar, curl the knees up and roll the hips toward your ribs at the top. If the legs only swing, you are training hip flexors instead of abs.',
+ar:'تعلّق بالبار، ارفع الركبتين ولُف الوركين نحو الأضلاع في الأعلى. إذا كانت الرجلان تتأرجحان فقط فأنت تدرب ثانيات الورك بدل البطن.'},
+alt:{en:'Captain chair knee raise',ar:'الكرسي الروماني'},q:'hanging knee raise proper form abs pelvic tilt'},
+declineSit:{n:{en:'Weighted decline sit-up',ar:'سِت أب منحدر بأوزان'},sets:3,reps:'12–15',rest:60,tier:1,anim:'declineSit',
+cue:{en:'Hold a plate across your chest and roll up one vertebra at a time. Progress by adding plate weight, never by going past fifteen reps.',
+ar:'أمسك قرصاً على صدرك وارتفع فقرة فقرة. التقدم بزيادة وزن القرص، لا بتجاوز خمسة عشر تكراراً أبداً.'},
+alt:{en:'Machine crunch',ar:'جهاز الكرنش'},q:'weighted decline sit up proper form'},
+abWheel:{n:{en:'Ab wheel rollout',ar:'عجلة البطن'},sets:3,reps:'8–12',rest:75,tier:1,anim:'abWheel',
+cue:{en:'From the knees. Keep the ribs tucked down and never let the lower back sag. Extend a little further each week — that extra distance is the progression.',
+ar:'من الركبتين. أبقِ القفص الصدري منخفضاً ولا تدع أسفل ظهرك يهبط أبداً. مُدّ أبعد قليلاً كل أسبوع — هذه المسافة الإضافية هي التقدم.'},
+alt:{en:'Plank with a plate on your back',ar:'بلانك مع قرص على الظهر'},q:'ab wheel rollout proper form progression'},
+singlePushdown:{n:{en:'Single-arm cable pushdown',ar:'دفع ترايسبس كيبل بذراع واحدة'},sets:3,reps:'12–15',rest:60,tier:1,anim:'pushdown',
+cue:{en:'One arm at a time, so the weaker side cannot hide behind the stronger one. Elbow pinned at your side, push down and turn the little finger outward at the bottom. Take the last set to failure.',
+ar:'ذراع واحدة في كل مرة، حتى لا تختبئ الجهة الأضعف خلف الأقوى. المرفق مثبت بجانبك، ادفع لأسفل ولُف الخنصر للخارج في النهاية. خذ آخر مجموعة حتى الفشل.'},
+alt:{en:'Rope pushdown, both arms',ar:'دفع بالحبل بالذراعين'},q:'single arm cable tricep pushdown proper form'},
+inclineOhExt:{n:{en:'Incline dumbbell overhead extension',ar:'تمديد ترايسبس دمبل على بنش مائل'},sets:4,reps:'10–12',rest:90,tier:1,anim:'inclineOhExt',
+cue:{en:'Lie back on a 45-degree bench and let the dumbbells travel down behind your head. Lying on the incline puts the long head of the triceps under a deeper stretch than standing does, and it is far kinder to the elbows. Elbows stay pointed at the ceiling the whole time.',
+ar:'استلقِ على بنش ٤٥ درجة ودع الدمبلز تنزل خلف رأسك. الاستلقاء على المائل يضع الرأس الطويلة للترايسبس تحت تمدد أعمق مما يفعله الوقوف، وهو أرحم بكثير للمرفقين. المرفقان يبقيان متجهين للسقف طوال الحركة.'},
+alt:{en:'Overhead rope extension',ar:'تمديد بالحبل خلف الرأس'},q:'incline dumbbell overhead tricep extension long head'},
+preacherCurl:{n:{en:'Preacher curl',ar:'بايسبس على بنش الواعظ'},sets:4,reps:'10–12',rest:90,tier:1,anim:'preacherCurl',
+cue:{en:'The pad locks your upper arm down so the biceps gets no help at all from the shoulder. Lower the whole way until the arm is almost straight — that bottom position is exactly where most people cut the rep short and throw away the point of the exercise.',
+ar:'الوسادة تثبّت عضدك فلا يحصل البايسبس على أي مساعدة من الكتف. انزل بالكامل حتى تكاد الذراع تستقيم — هذه النهاية السفلية هي بالضبط حيث يقصّر معظم الناس التكرار ويهدرون الهدف من التمرين.'},
+alt:{en:'Machine preacher curl',ar:'جهاز بايسبس الواعظ'},q:'preacher curl proper form full range biceps'},
+hammerCurl:{n:{en:'Hammer curl',ar:'هامر كيرل'},sets:3,reps:'12–15',rest:75,tier:1,anim:'hammerCurl',
+cue:{en:'Palms facing each other the whole way up. This builds the brachialis, the muscle sitting underneath the biceps. Grow it and it pushes the biceps up from below, which is what actually makes an arm look thicker from the side.',
+ar:'الكفان متقابلان طوال الحركة. هذا يبني العضلة العضدية، العضلة التي تقع تحت البايسبس. نمّها فتدفع البايسبس للأعلى من تحت، وهذا ما يجعل الذراع يبدو أسمك فعلاً من الجانب.'},
+alt:{en:'Rope hammer curl on the cable',ar:'هامر بالحبل على الكيبل'},q:'hammer curl proper form brachialis'},
+pallof:{n:{en:'Pallof press',ar:'بالوف برس'},sets:3,reps:'12 / side',rest:45,tier:2,anim:'pallof',
+cue:{en:'Stand side-on to the cable at chest height, press the handle straight out and resist the twist. This builds the deep bracing that makes the waist look tighter.',
+ar:'قف جانبياً للكيبل بمستوى الصدر، ادفع المقبض للأمام مستقيماً وقاوم الالتفاف. هذا يبني الشدّ العميق الذي يجعل الخصر يبدو أنحف.'},
+alt:{en:'Suitcase carry, 40 m per side',ar:'حمل الحقيبة ٤٠ متراً لكل جهة'},q:'pallof press proper form anti rotation'},
+chop:{n:{en:'Cable woodchopper',ar:'قطع خشب بالكيبل'},sets:3,reps:'12 / side',rest:45,tier:2,anim:'chop',
+cue:{en:'Rotate from the torso with the hips fairly still. This builds the taper at the waist rather than thickening it.',
+ar:'الدوران من الجذع والوركان شبه ثابتين. هذا يبني الانحدار عند الخصر بدل أن يُسمّكه.'},
+alt:{en:'Landmine rotation',ar:'دوران اللاندماين'},q:'cable woodchopper proper form obliques'}
+};
+const SESSIONS=[
+{id:'pushA',code:'PUSH A',accent:['#FF1F3D','#FF6B00'],
+title:{en:'Push A',ar:'دفع أ'},
+focus:{en:'Chest + triceps',ar:'صدر + ترايسبس'},
+sub:{en:'Chest leads, then two triceps exercises to finish. Six exercises, about 55 minutes.',
+ar:'الصدر أولاً، ثم تمرينا ترايسبس في النهاية. ستة تمارين، حوالي ٥٥ دقيقة.'},
+cardio:{en:'Finish with a 20 min incline walk — 10% incline, 5.0 km/h, able to hold a conversation.',
+ar:'اختم بـ ٢٠ دقيقة مشي بميل ١٠٪ وسرعة ٥٫٠ كم/س، بوتيرة تسمح لك بالكلام.'},
+ex:['machineChest','inclineDB','cableFly','ohTri','singlePushdown'],core:['cableCrunch']},
+{id:'pullA',code:'PULL A',accent:['#0047FF','#00D4FF'],
+title:{en:'Pull A',ar:'سحب أ'},
+focus:{en:'Back width + biceps',ar:'عرض الظهر + بايسبس'},
+sub:{en:'Vertical pulling for width, then a double biceps block. This is the session that builds the V.',
+ar:'سحب عمودي للعرض، ثم بلوك بايسبس مزدوج. هذه هي الحصة التي تبني الـ V‎.'},
+cardio:{en:'Finish with a 20 min incline walk.',ar:'اختم بـ ٢٠ دقيقة مشي بميل.'},
+ex:['pulldown','chestRow','pullover','inclineCurl','cableCurl'],core:['kneeRaise']},
+{id:'legsA',code:'LEGS A',accent:['#8B2BFF','#E040FB'],
+title:{en:'Legs A',ar:'أرجل أ'},
+focus:{en:'Legs, trimmed',ar:'أرجل مختصرة'},
+sub:{en:'Deliberately the shortest session. Your legs score 91 — they hold what they have while the volume goes upstairs.',
+ar:'أقصر حصة عن قصد. رجلاك تسجلان ٩١ — تحافظان على ما لديهما بينما يذهب الحجم للأعلى.'},
+cardio:{en:'No cardio today. Legs are enough. Just hit your 8–10k steps.',
+ar:'لا كارديو اليوم. الأرجل تكفي. فقط أكمل ٨–١٠ آلاف خطوة.'},
+ex:['legPress','seatedCurl','legExt','calf','latBonus'],core:['pallof']},
+{id:'pushB',code:'PUSH B',accent:['#FF7A00','#FFD000'],
+title:{en:'Push B',ar:'دفع ب'},
+focus:{en:'Shoulders + triceps',ar:'أكتاف + ترايسبس'},
+sub:{en:'Shoulders lead, triceps finish. This is the session that widens your frame.',
+ar:'الأكتاف أولاً والترايسبس في النهاية. هذه هي الحصة التي توسّع هيكلك.'},
+cardio:{en:'Finish with a 25 min incline walk or bike.',ar:'اختم بـ ٢٥ دقيقة مشي بميل أو دراجة.'},
+ex:['dbShoulder','dbLat','inclineMachine','inclineOhExt','pushdown'],core:['declineSit','chop']},
+{id:'pullB',code:'PULL B',accent:['#00E87A','#A8FF00'],
+title:{en:'Pull B',ar:'سحب ب'},
+focus:{en:'Back thickness + biceps',ar:'سماكة الظهر + بايسبس'},
+sub:{en:'Horizontal pulling for thickness, then the heaviest biceps work of the rotation.',
+ar:'سحب أفقي للسماكة، ثم أثقل عمل بايسبس في الدورة.'},
+cardio:{en:'Finish with a 20 min incline walk.',ar:'اختم بـ ٢٠ دقيقة مشي بميل.'},
+ex:['seatedRow','neutralPulldown','rearCable','preacherCurl','hammerCurl'],core:['abWheel']},
+{id:'legsB',code:'LEGS B',accent:['#FF0A54','#FF5C7A'],
+title:{en:'Legs B',ar:'أرجل ب'},
+focus:{en:'Hamstring and glute',ar:'الخلفية والأرداف'},
+sub:{en:'Posterior chain lead. Different from Legs A on purpose — hamstrings, glutes and soleus.',
+ar:'السلسلة الخلفية أولاً. مختلفة عن أرجل أ عن قصد — الخلفية والأرداف والعضلة النعلية.'},
+cardio:{en:'No cardio today. Just hit your 8–10k steps.',ar:'لا كارديو اليوم. فقط أكمل ٨–١٠ آلاف خطوة.'},
+ex:['rdl','hackSquat','lyingCurl','seatedCalfR','latBonus'],core:['cableCrunch']}
+];
+const CO={posStart:{en:'START',ar:'البداية'},posEnd:{en:'FINISH',ar:'النهاية'},
+navTrain:{en:'Train',ar:'التمرين'},navCore:{en:'Abs',ar:'البطن'},navFood:{en:'Food',ar:'التغذية'},
+navPlan:{en:'Plan',ar:'الخطة'},navYou:{en:'You',ar:'قياسك'},
+tutorial:{en:'Full tutorial',ar:'شرح كامل'},rest:{en:'Rest',ar:'راحة'},
+core:{en:'Core finisher',ar:'خاتمة البطن'},sets:{en:'sets',ar:'مجموعة'},
+finish:{en:'Finish and move to next',ar:'أنهِ وانتقل للتالي'},
+saved:{en:'Nothing logged yet',ar:'لم تسجل شيئاً بعد'},
+restSub:{en:'next set when this hits zero',ar:'المجموعة التالية عند الصفر'},
+last:{en:'last',ar:'سابقاً'},swap:{en:'If busy',ar:'إذا مشغول'},
+beat:{en:'Beat last time',ar:'اهزم المرة السابقة'},
+next:{en:'NEXT',ar:'التالي'},
+upNextBig:{en:'Next up',ar:'التالي'},
+lastDone:{en:'Last done',ar:'آخر مرة'},
+plusAbs:{en:'abs',ar:'بطن'},
+start:{en:'Start this session',ar:'ابدأ هذه الحصة'},
+resume:{en:'Carry on',ar:'أكمل'},
+exCount:{en:'exercises',ar:'تمارين'},
+mins:{en:'min',ar:'دقيقة'},
+railLabel:{en:'Your rotation',ar:'دورتك'},
+calmNever:{en:'Nothing is scheduled by day. Finish a session and the next one moves up — whether that is tomorrow or next week.',ar:'لا شيء مجدول بالأيام. أنهِ حصة فتتقدم التالية — سواء كان ذلك غداً أو الأسبوع القادم.'},
+calmGap:{en:'You last trained <b>%s</b>. Nothing was missed and nothing is owed — this is simply the next one in line.',ar:'آخر تدريب لك كان <b>%s</b>. لم تفوّت شيئاً ولا تدين بشيء — هذه ببساطة التالية في الصف.'},
+calmToday:{en:'Trained today already. This one is waiting whenever you come back.',ar:'تدربت اليوم بالفعل. هذه بانتظارك متى عدت.'},
+ofRot:{en:'of the rotation',ar:'من الدورة'},
+upNext:{en:'Next in your rotation',ar:'التالي في دورتك'},
+jump:{en:'Doing this one',ar:'سأفعل هذه'},
+notThis:{en:'Tap any session above to do that one instead — the rotation carries on from there.',
+ar:'اضغط أي حصة بالأعلى لتفعلها بدلاً منها — والدورة تكمل من هناك.'},
+never:{en:'not done yet',ar:'لم تُنجز بعد'},
+today:{en:'today',ar:'اليوم'},yest:{en:'yesterday',ar:'أمس'},
+daysAgo:{en:'days ago',ar:'يوم'},
+install:{en:'Put this on your Home Screen',ar:'ضع هذا على شاشتك الرئيسية'},
+installP:{en:'It opens full screen with its own icon, like any other app, and works without signal in the gym.',
+ar:'يفتح بملء الشاشة بأيقونته الخاصة، كأي تطبيق آخر، ويعمل بدون شبكة في الصالة.'},
+i1:{en:'Open this page in Safari',ar:'افتح هذه الصفحة في سفاري'},
+i2:{en:'Tap the Share button at the bottom',ar:'اضغط زر المشاركة في الأسفل'},
+i3:{en:'Scroll down and tap "Add to Home Screen"',ar:'انزل واضغط «إضافة إلى الشاشة الرئيسية»'},
+i4:{en:'Tap Add. Done.',ar:'اضغط إضافة. انتهى.'},
+rotLen:{en:'Rotation length',ar:'طول الدورة'},
+rot5:{en:'5 sessions',ar:'٥ حصص'},rot6:{en:'6 sessions',ar:'٦ حصص'},
+rotNote:{en:'With a rolling rotation it no longer matters which weekday you train. Miss a day and nothing is lost — the next session is simply the next one in line.',
+ar:'مع الدورة المتدحرجة لم يعد مهماً في أي يوم تتدرب. تفوّت يوماً ولا تخسر شيئاً — الحصة التالية هي ببساطة التالية في الصف.'},
+history:{en:'Recent sessions',ar:'الحصص الأخيرة'},
+noHistory:{en:'No sessions logged yet. Finish one and it appears here.',ar:'لا حصص مسجلة بعد. أنهِ واحدة وستظهر هنا.'},
+last7:{en:'in last 7 days',ar:'في آخر ٧ أيام'},
+total:{en:'total sessions',ar:'إجمالي الحصص'},
+since:{en:'days since gym',ar:'يوم منذ الصالة'}
+};
+const $=(s,r=document)=>r.querySelector(s);
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+const yt=q=>'https://www.youtube.com/results?search_query='+encodeURIComponent(q);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let viewIdx=0,curView='train';
+const rot=()=>SESSIONS.slice(0,ROTLEN);
+const S=i=>rot()[((i%ROTLEN)+ROTLEN)%ROTLEN];
+const exList=s=>[...s.ex.map(k=>E[k]),...s.core.map(k=>E[k])];
+const kSet=(sid,i,n)=>`${sid}|${i}|${n}`;
+const kEx=(sid,x)=>sid+'|'+x.n.en;
+const dayKey=(d=new Date())=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function stats(s){
+let t=0,n=0;
+exList(s).forEach((x,i)=>{for(let q=0;q<x.sets;q++){t++;if(LOG[kSet(s.id,i,q)]?.done)n++}});
+return{t,n,pct:t?Math.round(n/t*100):0};
+}
+function lastDone(sid){
+for(let i=JOURNAL.length-1;i>=0;i--) if(JOURNAL[i].id===sid) return JOURNAL[i].d;
+return null;
+}
+function daysSince(dk){
+if(!dk) return null;
+const [y,m,d]=dk.split('-').map(Number);
+const then=new Date(y,m-1,d), now=new Date();
+return Math.round((new Date(now.getFullYear(),now.getMonth(),now.getDate())-then)/864e5);
+}
+function agoLabel(dk){
+const n=daysSince(dk);
+if(n===null) return T(CO.never);
+if(n===0) return T(CO.today);
+if(n===1) return T(CO.yest);
+return n+' '+T(CO.daysAgo);
+}
+function setAccent(){
+const a=S(viewIdx).accent;
+document.documentElement.style.setProperty('--accent',a[0]);
+document.documentElement.style.setProperty('--accent2',a[1]);
+document.documentElement.style.setProperty('--glow',a[0]+'4D');
+}
+function renderRail(){
+const lb=$('#railLabel'); if(lb) lb.textContent=T(CO.railLabel);
+const c=$('#rail');c.innerHTML='';
+rot().forEach((s,i)=>{
+const isNext=i===POS, isView=i===viewIdx;
+const b=el('button','rchip'+(isNext?' next':'')+(isView?' on':''));
+b.innerHTML=`<u>${isNext?esc(T(CO.next)):String(i+1)}</u><b>${s.code}</b>`;
+b.onclick=()=>{viewIdx=i;setAccent();if(curView!=='train')setView('train');
+renderRail();renderTrain();window.scrollTo({top:0,behavior:'smooth'})};
+c.appendChild(b);
+});
+}
+function exCard(s,x,i,isCore,offset){
+const card=el('div','ex'+(isCore?' core':''));
+let n=0;for(let q=0;q<x.sets;q++)if(LOG[kSet(s.id,i,q)]?.done)n++;
+if(n===x.sets)card.classList.add('done');
+const prev=HIST[kEx(s.id,x)]||[];
+const h=el('button','exh');
+h.innerHTML=`<span class="ix">${isCore?'C'+(i-offset+1):i+1}</span>
+<span class="exn"><b>${esc(T(x.n))}</b><em class="${x.tier===1?'':'t2'}">${esc(T(x.tier===1?T1:T2))}</em></span>
+<span class="exs"><b>${x.sets}×${esc(x.reps.replace(/ \/ side| each/,''))}</b>
+<span>${n}/${x.sets} ${esc(T(CO.sets))}</span></span>`;
+h.onclick=()=>{
+const was=card.classList.contains('open');
+[...card.parentNode.querySelectorAll('.ex.open')].forEach(o=>o.classList.remove('open'));
+if(!was){card.classList.add('open');buildBody(card,s,x,i,prev)}
+};
+card.appendChild(h);
+card.appendChild(el('div','exb'));
+card._build=()=>buildBody(card,s,x,i,prev);
+return card;
+}
+function buildBody(card,s,x,i,prev){
+const b=card.querySelector('.exb');
+if(b.dataset.built)return; b.dataset.built='1';
+const sh=SHOTS[x.anim];
+const stage=el('div','stage');
+if(sh){
+const mk=MUSCLE[x.anim];
+stage.innerHTML='<div class="shot"><img class="sa" loading="lazy" alt="" src="'+sh[0]+'">'+
+'<img class="sb" loading="lazy" alt="" src="'+sh[1]+'">'+
+'<span class="pos pa">'+esc(T(CO.posStart))+'</span><span class="pos pb">'+esc(T(CO.posEnd))+'</span></div>'+
+(mk?'<span class="mus-label">'+esc(T(MUSNAME[mk]))+'</span>':'');
+b.appendChild(stage);
+const fk=FAULT[x.anim];
+if(fk&&FAULTS[fk]){const fc=el('p','fault-cue');
+fc.innerHTML='<b>'+esc(T(FAULTS[fk].t))+'</b> — '+esc(T(FAULTS[fk].c));
+stage.appendChild(fc);}
+}else{
+stage.innerHTML=figureSVG(x.anim)+'<span class="ph"></span><button class="spd">1×</button><span class="mus-label"></span>';
+b.appendChild(stage);
+const fc=el('p','fault-cue');stage.appendChild(fc);
+stage._exname=T(x.n);
+const rec=mountAnim(stage,x.anim);
+const spd=stage.querySelector('.spd');
+spd.onclick=e=>{e.stopPropagation();
+const o=[1,.5,1.5],nx=o[(o.indexOf(rec.speed)+1)%o.length];rec.speed=nx;spd.textContent=nx+'×'};
+}
+b.appendChild(el('p','cue',esc(T(x.cue))));
+b.appendChild(el('p','alt','<b>'+esc(T(CO.swap))+':</b> '+esc(T(x.alt))));
+const acts=el('div','acts');
+const a=el('a','act',esc(T(CO.tutorial))+' ↗');a.href=yt(x.q);a.target='_blank';a.rel='noopener';
+acts.appendChild(a);
+const rb=el('button','act',esc(T(CO.rest))+' '+x.rest+'s');
+rb.onclick=()=>startTimer(x.rest,T(x.n));acts.appendChild(rb);
+b.appendChild(acts);
+const sets=el('div','sets');
+for(let q=0;q<x.sets;q++){
+const k=kSet(s.id,i,q),rc=LOG[k]||{},p=prev[q];
+const row=el('div','srow'+(rc.done?' on':''));
+row.appendChild(el('span','tag',
+`<b>${LANG==='en'?'SET':'م'} ${q+1}</b>`+(p&&p.w?`<small>${esc(T(CO.last))} ${esc(p.w)}×${esc(p.r||'')}</small>`:'')));
+const wi=el('input');wi.type='text';wi.inputMode='decimal';
+wi.placeholder=LANG==='en'?'kg':'كغ';wi.value=rc.w||(p&&p.w?p.w:'');
+const ri=el('input');ri.type='text';ri.inputMode='numeric';
+ri.placeholder=LANG==='en'?'reps':'تكرار';ri.value=rc.r||'';
+const save=()=>{LOG[k]={...(LOG[k]||{}),w:wi.value,r:ri.value};store.set('ppl4-log',LOG)};
+wi.onchange=save;ri.onchange=save;
+const tick=el('button','tick','✓');
+tick.onclick=()=>{
+const on=!(LOG[k]?.done);
+LOG[k]={...(LOG[k]||{}),w:wi.value,r:ri.value,done:on};
+store.set('ppl4-log',LOG);
+row.classList.toggle('on',on);
+if(on){startTimer(x.rest,T(x.n));if(navigator.vibrate)navigator.vibrate(22)}
+refreshCounts(s,card,x,i);
+};
+row.append(wi,ri,tick);sets.appendChild(row);
+}
+b.appendChild(sets);
+if(prev.some(p=>p&&p.w)) b.appendChild(el('p','pb','↑ '+esc(T(CO.beat))));
+}
+function refreshCounts(s,card,x,i){
+let n=0;for(let q=0;q<x.sets;q++)if(LOG[kSet(s.id,i,q)]?.done)n++;
+const lbl=card.querySelector('.exs span');
+if(lbl)lbl.textContent=`${n}/${x.sets} ${T(CO.sets)}`;
+card.classList.toggle('done',n===x.sets);
+const st=stats(s),v=$('#v-train');
+const f=v.querySelector('.meter .fill'),p=v.querySelector('.meter .pct');
+if(f)f.style.width=st.pct+'%';
+if(p)p.textContent=st.n+'/'+st.t;
+const fin=v.querySelector('.finish');
+if(fin){fin.disabled=!st.n;fin.textContent=T(st.n?CO.finish:CO.saved)}
+renderRail();
+}
+function installCard(){
+if(INSTALLED||HIDEINSTALL) return null;
+const c=el('div','install',
+`<button class="x" aria-label="close">×</button>
+<h4>${esc(T(CO.install))}</h4><p>${esc(T(CO.installP))}</p>
+<ol><li>${esc(T(CO.i1))}</li>
+<li>${esc(T(CO.i2))} <span class="shareico">↑</span></li>
+<li>${esc(T(CO.i3))}</li><li>${esc(T(CO.i4))}</li></ol>`);
+c.querySelector('.x').onclick=()=>{HIDEINSTALL=true;store.set('ppl4-hideinstall',true);renderTrain()};
+return c;
+}
+function estMins(s){let n=0;exList(s).forEach(x=>n+=x.sets);return Math.round((n*1.9+8)/5)*5}
+function lastTrainedLabel(){
+if(!JOURNAL.length) return null;
+return agoLabel(JOURNAL[JOURNAL.length-1].d);
+}
+function heroCard(s){
+const h=el('div','hero');
+const nEx=s.ex.length, mins=estMins(s);
+const ago=agoLabel(lastDone(s.id));
+h.innerHTML=`<div class="lab"><i></i>${esc(T(CO.upNextBig))}</div>
+<h1>${esc(T(s.title))}</h1>
+<p class="meta">${esc(T(s.focus))} &middot; ${nEx} ${esc(T(CO.exCount))} + ${esc(T(CO.plusAbs))} &middot; ~${mins} ${esc(T(CO.mins))}</p>
+<p class="ago">${esc(T(CO.lastDone))}: ${esc(ago)}</p>
+<button class="go">${esc(T(CO.start))} &rarr;</button>
+<div class="dots">${rot().map((z,i)=>`<i class="${i===POS?'on':''}"></i>`).join('')}</div>`;
+h.querySelector('.go').onclick=()=>{
+const first=$('#v-train').querySelector('.ex');
+if(first){
+if(!first.classList.contains('open')){
+[...$('#v-train').querySelectorAll('.ex.open')].forEach(z=>z.classList.remove('open'));
+first.classList.add('open'); first._build();
+}
+first.scrollIntoView({behavior:'smooth',block:'start'});
+}
+};
+return h;
+}
+function calmLine(){
+const since=JOURNAL.length?daysSince(JOURNAL[JOURNAL.length-1].d):null;
+let txt;
+if(since===null) txt=T(CO.calmNever);
+else if(since===0) txt=T(CO.calmToday);
+else txt=T(CO.calmGap).replace('%s',esc(lastTrainedLabel()));
+return el('div','calm','<span class="ic">&#9211;</span><span>'+txt+'</span>');
+}
+function renderTrain(){
+const s=S(viewIdx),v=$('#v-train');
+const openIdx=[...v.querySelectorAll('.ex')].findIndex(e=>e.classList.contains('open'));
+v.innerHTML='';
+if(viewIdx!==POS){
+const u=el('div','upnext',
+`<span class="dot"></span><span class="tx">${esc(T(CO.upNext))}<b>${esc(T(S(POS).title))}</b></span>
+<button class="jump">${esc(T(CO.jump))} →</button>`);
+u.querySelector('.jump').onclick=()=>{viewIdx=POS;setAccent();renderRail();renderTrain();window.scrollTo({top:0,behavior:'smooth'})};
+v.appendChild(u);
+}
+v.appendChild(heroCard(s));
+v.appendChild(calmLine());
+const ic=installCard(); if(ic) v.appendChild(ic);
+v.appendChild(el('p','sub',esc(T(s.sub))));
+const st=stats(s);
+v.appendChild(el('div','meter',
+`<div class="bar"><div class="fill" style="width:${st.pct}%"></div></div><div class="pct tnum">${st.n}/${st.t}</div>`));
+const cards=[],off=s.ex.length;
+s.ex.forEach((k,i)=>{const c=exCard(s,E[k],i,false,off);v.appendChild(c);cards.push(c)});
+v.appendChild(el('h3','sec dsp',esc(T(CO.core))));
+s.core.forEach((k,i)=>{const c=exCard(s,E[k],off+i,true,off);v.appendChild(c);cards.push(c)});
+v.appendChild(el('div','note ok','<p>'+esc(T(s.cardio))+'</p>'));
+const fin=el('button','finish',esc(T(st.n?CO.finish:CO.saved)));
+fin.disabled=!st.n;
+fin.onclick=()=>finishSession(s);
+v.appendChild(fin);
+v.appendChild(el('p','sub',esc(T(CO.notThis))));
+let tgt=openIdx;
+if(tgt<0) tgt=cards.findIndex(c=>!c.classList.contains('done'));
+if(tgt>=0&&cards[tgt]){cards[tgt].classList.add('open');cards[tgt]._build()}
+}
+function finishSession(s){
+exList(s).forEach((x,i)=>{
+const arr=[];
+for(let q=0;q<x.sets;q++){const r=LOG[kSet(s.id,i,q)];arr.push({w:r?.w||'',r:r?.r||''});delete LOG[kSet(s.id,i,q)]}
+if(arr.some(z=>z.w))HIST[kEx(s.id,x)]=arr;
+});
+JOURNAL.push({id:s.id,code:s.code,d:dayKey()});
+if(JOURNAL.length>300)JOURNAL=JOURNAL.slice(-300);
+POS=(rot().findIndex(z=>z.id===s.id)+1)%ROTLEN;
+viewIdx=POS;
+store.set('ppl4-log',LOG);store.set('ppl4-hist',HIST);
+store.set('ppl4-journal',JOURNAL);store.set('ppl4-pos',POS);
+setAccent();renderRail();renderTrain();renderYou();
+window.scrollTo({top:0,behavior:'smooth'});
+if(navigator.vibrate)navigator.vibrate([25,60,25]);
+}
+let tId=null,tLeft=0,tTotal=0;
+function startTimer(sec,who){
+tLeft=sec;tTotal=sec;
+$('#tWho').textContent=who;$('#tSub').textContent=T(CO.restSub);
+$('#timer').classList.add('on');paint();clearInterval(tId);
+tId=setInterval(()=>{tLeft--;paint();
+if(tLeft<=0){clearInterval(tId);$('#timer').classList.remove('on');
+if(navigator.vibrate)navigator.vibrate([180,90,180])}},1000);
+}
+function paint(){
+$('#tVal').textContent=Math.floor(tLeft/60)+':'+String(Math.max(tLeft%60,0)).padStart(2,'0');
+$('#tArc').setAttribute('stroke-dashoffset',138.2*(1-Math.max(tLeft,0)/tTotal));
+}
+$('#tAdd').onclick=()=>{tLeft+=30;tTotal=Math.max(tTotal,tLeft);paint()};
+$('#tSkip').onclick=()=>{clearInterval(tId);$('#timer').classList.remove('on')};
+function renderCore(){
+const v=$('#v-core');v.innerHTML='';const en=LANG==='en';
+v.appendChild(el('h2','title dsp',en?'Abs and the belly':'البطن والكرش'));
+v.appendChild(el('p','sub',en?'The part of your goal most likely to go wrong.':'الجزء الأكثر عرضة للخطأ في هدفك.'));
+v.appendChild(el('div','note',en
+?'<p><b>You cannot crunch away trunk fat.</b> Studies from Katch in 1983 through a 2022 meta-analysis of over a thousand people found that training a muscle does not strip the fat sitting on top of it. Your — of trunk fat comes off through an energy deficit, and it comes off from everywhere at once.</p>'
+:'<p><b>لا يمكنك إزالة دهون الجذع بتمارين البطن.</b> دراسات من Katch عام ١٩٨٣ حتى تحليل شامل عام ٢٠٢٢ ضمّ أكثر من ألف شخص وجدت أن تدريب عضلة لا يزيل الدهون فوقها. الـ ١١٫٥ كغ من دهون الجذع تنزل بالعجز الحراري، ومن كل الجسم في آن واحد.</p>'));
+v.appendChild(el('div','note ok',en
+?'<p><b>Train them hard anyway, for a different reason.</b> A thick rectus abdominis means there is something visible underneath once the fat comes off. Two men at 15% body fat look completely different depending on whether the muscle was built during the cut. Every ab set here is loaded and progressive, 8–15 reps.</p>'
+:'<p><b>درّبها بقوة رغم ذلك، لسبب مختلف.</b> عضلة بطن سميكة تعني وجود شيء ظاهر تحتها عند نزول الدهون. رجلان عند ١٥٪ دهون يبدوان مختلفين تماماً بحسب بناء العضلة أثناء التنشيف. كل مجموعة بطن هنا بأوزان وبتقدم، ٨–١٥ تكراراً.</p>'));
+v.appendChild(el('h3','sec dsp',en?'The number you need':'الرقم المطلوب'));
+v.appendChild(el('p','sub',en
+?'You are at about 21.4% body fat. Abs show for most men between 12% and 15%. From — of fat, reaching roughly 15% while holding your current muscle means losing 6–7 kg of pure fat. At 0.5 kg a week that is a 12–16 week project.'
+:'أنت عند ٢١٫٤٪ دهون تقريباً. البطن تظهر عند معظم الرجال بين ١٢٪ و١٥٪. من ١٨٫٢ كغ دهون، الوصول لحوالي ١٥٪ مع الحفاظ على عضلاتك يعني خسارة ٦–٧ كغ دهون صافية. بمعدل ٠٫٥ كغ أسبوعياً فهذا مشروع ١٢–١٦ أسبوعاً.'));
+v.appendChild(el('h3','sec dsp',en?'Core work across the rotation':'عمل البطن عبر الدورة'));
+v.appendChild(el('div','',`<table><tr><th>${en?'Session':'الحصة'}</th><th>${en?'Movements':'التمارين'}</th></tr>`+
+SESSIONS.map(s=>`<tr><td><strong>${s.code}</strong></td><td>${s.core.map(k=>esc(T(E[k].n))).join('<br>')}</td></tr>`).join('')+'</table>'));
+}
+function renderFood(){
+const v=$('#v-food');v.innerHTML='';const en=LANG==='en';
+v.appendChild(el('h2','title dsp',en?'Fuel':'التغذية'));
+v.appendChild(el('p','sub',en?'From your scan: measured BMR 1,978 kcal at 85.2 kg.':'من قياسك: الأيض الأساسي ١٬٩٧٨ سعرة عند ٨٥٫٢ كغ.'));
+const M=[
+['Maintenance','الاحتياج للثبات','2,850–3,000','BMR × 1.45–1.5','الأيض × ١٫٤٥–١٫٥',0],
+['Daily target','السعرات المستهدفة','2,450–2,550','A deficit of about 400 kcal','عجز حوالي ٤٠٠ سعرة',1],
+['Protein','البروتين','175–190 g','2.1–2.2 g/kg — the number that decides everything','٢٫١–٢٫٢ غ/كغ — الرقم الذي يحسم كل شيء',1],
+['Fat','الدهون','70–85 g','Stay above 0.8 g/kg','ابقَ فوق ٠٫٨ غ/كغ',0],
+['Carbs','الكربوهيدرات','250–290 g','Whatever is left, loaded around training','ما تبقى، مركّزة حول التمرين',0],
+['Rate of loss','معدل النزول','0.4–0.6 kg/wk','Slower is correct — it protects muscle','الأبطأ هو الصحيح لأنه يحمي العضلة',0],
+['Water','الماء','3.5–4.0 L','Dubai heat, and it steadies your scan readings','حر دبي، ويثبّت قراءات الجهاز',0],
+['Sleep','النوم','7–9 hrs','Under-sleeping in a deficit costs you muscle, not fat','قلة النوم في العجز تكلّفك عضلاً لا دهناً',0]];
+const b=el('div','');
+M.forEach(m=>b.appendChild(el('div','macro'+(m[5]?' key':''),
+`<div class="l">${en?m[0]:m[1]}<small>${en?m[3]:m[4]}</small></div><div class="v">${m[2]}</div>`)));
+v.appendChild(b);
+v.appendChild(el('div','note',en
+?'<p><b>Protein is the number that matters most.</b> The ISSN position stand puts 1.4–2.0 g/kg as sufficient to build and hold muscle, and notes 2.3–3.1 g/kg may be needed to maximise lean mass retention <i>during a deficit</i>. You are in a deficit and you have already proven you lose muscle when you cut. Hitting 180 g every day is higher leverage than any exercise choice in this app.</p>'
+:'<p><b>البروتين هو الرقم الأهم.</b> بيان الجمعية الدولية لتغذية الرياضة يضع ١٫٤–٢٫٠ غ/كغ ككمية كافية لبناء العضلة والحفاظ عليها، ويشير إلى أن ٢٫٣–٣٫١ غ/كغ قد تكون مطلوبة لتعظيم الحفاظ على الكتلة الصافية <i>أثناء العجز</i>. أنت في عجز وقد أثبتّ أنك تخسر عضلاً عند التنشيف. الوصول لـ ١٨٠ غ يومياً أعلى مردوداً من أي اختيار تمرين هنا.</p>'));
+v.appendChild(el('h3','sec dsp',en?'A workable Dubai day':'يوم واقعي في دبي'));
+const meals=[['Breakfast','الفطور','4 whole eggs + 3 whites, 60 g oats, berries','٤ بيضات كاملة + ٣ بياض، ٦٠ غ شوفان، توت','40 g'],
+['Lunch','الغداء','250 g grilled shish taouk, large fattoush, 1 cup rice','٢٥٠ غ شيش طاووق، فتوش كبير، كوب أرز','55 g'],
+['Pre-training','قبل التمرين','200 g Greek yoghurt, banana, coffee','لبن يوناني ٢٠٠ غ، موزة، قهوة','20 g'],
+['Post-training','بعد التمرين','Whey shake and dates','مخفوق واي وتمر','30 g'],
+['Dinner','العشاء','300 g grilled hammour or salmon, vegetables, freekeh','٣٠٠ غ هامور أو سلمون، خضار، فريكة','50 g']];
+v.appendChild(el('div','',`<table><tr><th>${en?'Meal':'الوجبة'}</th><th>${en?'Example':'مثال'}</th><th>${en?'Protein':'بروتين'}</th></tr>`+
+meals.map(m=>`<tr><td><b>${en?m[0]:m[1]}</b></td><td>${en?m[2]:m[3]}</td><td class="n">${m[4]}</td></tr>`).join('')+'</table>'));
+v.appendChild(el('p','sub',en
+?'Swap freely for food you enjoy as long as protein and the calorie range hold. If your weight has not moved after three straight weeks, cut 150 kcal from carbs. If you are dropping faster than 0.7 kg a week, add 150 back.'
+:'بدّل بحرية بأطعمة تحبها ما دام البروتين ونطاق السعرات محفوظين. إذا لم يتحرك وزنك بعد ثلاثة أسابيع، اخصم ١٥٠ سعرة من الكربوهيدرات. وإذا نزلت أسرع من ٠٫٧ كغ أسبوعياً، أعد ١٥٠.'));
+}
+function renderPlan(){
+const v=$('#v-plan');v.innerHTML='';const en=LANG==='en';
+v.appendChild(el('h2','title dsp',en?'How it works':'كيف يعمل'));
+v.appendChild(el('p','sub',en?'A rolling rotation. No weekdays, no catching up, no missed sessions.':'دورة متدحرجة. بلا أيام أسبوع، بلا تعويض، بلا حصص فائتة.'));
+v.appendChild(el('div','note',en
+?'<p><b>The rotation is a queue, not a calendar.</b> Each session sits in line behind the last one. Finish Pull A and Legs A moves to the front — whether that is tomorrow or in four days. Skip a week and nothing is lost or owed; you simply pick up the next one in line.</p><p>That also means the five-versus-six question stops mattering. Train five times one week and three the next, and the rotation just advances more slowly. Consistency shows up in the log, not in a calendar grid.</p>'
+:'<p><b>الدورة صفّ انتظار وليست تقويماً.</b> كل حصة تقف في الصف خلف السابقة. أنهِ سحب أ فتتقدم أرجل أ — سواء كان ذلك غداً أو بعد أربعة أيام. تغيب أسبوعاً ولا تخسر شيئاً ولا تدين بشيء؛ تكمل ببساطة التالية في الصف.</p><p>هذا يعني أيضاً أن سؤال الخمسة مقابل الستة لم يعد مهماً. تدرّب خمس مرات أسبوعاً وثلاثاً في التالي، والدورة تتقدم ببطء أكبر فقط. الانتظام يظهر في السجل لا في شبكة تقويم.</p>'));
+v.appendChild(el('h3','sec dsp',esc(T(CO.rotLen))));
+const seg=el('div','seg');
+[[5,CO.rot5],[6,CO.rot6]].forEach(([n,lab])=>{
+const b=el('button',ROTLEN===n?'on':'',esc(T(lab)));
+b.onclick=()=>{ROTLEN=n;if(POS>=ROTLEN)POS=0;if(viewIdx>=ROTLEN)viewIdx=POS;
+store.set('ppl5-rotlen',ROTLEN);store.set('ppl4-pos',POS);
+setAccent();renderRail();renderTrain();renderPlan();renderCore()};
+seg.appendChild(b);
+});
+v.appendChild(seg);
+v.appendChild(el('p','sub',ROTLEN===6
+? (en?'Push A → Pull A → Legs A → Push B → Pull B → Legs B, then back to the start.'
+:'دفع أ ← سحب أ ← أرجل أ ← دفع ب ← سحب ب ← أرجل ب، ثم العودة للبداية.')
+: (en?'Push A → Pull A → Legs A → Push B → Pull B, then back to the start. One leg day per cycle.'
+:'دفع أ ← سحب أ ← أرجل أ ← دفع ب ← سحب ب، ثم العودة للبداية. يوم أرجل واحد لكل دورة.')));
+v.appendChild(el('h3','sec dsp',en?'The rules':'القواعد'));
+const R=[
+['Machines and dumbbells, on purpose','الأجهزة والدمبل عن قصد',
+'Almost nothing here needs technique you have to practise. Machines fix the path so you can push hard on the muscle instead of managing balance, and they spare your lower back across five or six sessions a week.',
+'تقريباً لا شيء هنا يحتاج أداءً تحتاج للتدرب عليه. الأجهزة تثبّت المسار فتدفع بقوة على العضلة بدل إدارة التوازن، وتريح أسفل ظهرك عبر خمس أو ست حصص أسبوعياً.'],
+['Stop two reps short','توقف قبل الفشل بتكرارين',
+'Every set ends while you could still manage about two more. Only the final set of an isolation exercise goes all the way. Grinding to failure five days a week wrecks recovery and buys almost nothing.',
+'كل مجموعة تنتهي وأنت قادر على تكرارين إضافيين تقريباً. فقط المجموعة الأخيرة من تمرين العزل تصل للنهاية. الوصول للفشل خمسة أيام أسبوعياً يدمر الاستشفاء ولا يعطي شيئاً تقريباً.'],
+['Beat the last number','اهزم الرقم السابق',
+'Every set is pre-filled with what you lifted last time you did this session. Match the reps at the top of the range on all sets, then add the smallest jump next time. That is the entire progression system.',
+'كل مجموعة معبأة مسبقاً بما رفعته آخر مرة أديت فيها هذه الحصة. حقّق أعلى النطاق في كل المجموعات، ثم أضف أصغر زيادة في المرة التالية. هذا نظام التقدم كله.'],
+['Eight minutes of warm-up','ثماني دقائق إحماء',
+'Five minutes on the bike, then two light ramp-up sets on the first exercise only. Ramp-ups are not working sets and do not get logged.',
+'خمس دقائق على الدراجة، ثم مجموعتان تصاعديتان خفيفتان على التمرين الأول فقط. المجموعات التصاعدية ليست مجموعات عمل ولا تُسجَّل.'],
+['Deload every 8 rotations','تخفيف كل ٨ دورات',
+'Halve every set count for one full cycle, keep the same weights, stay far away from failure. This is where the adaptation actually gets consolidated, and skipping it is how intermediates stall for months.',
+'خفّض عدد المجموعات للنصف لدورة كاملة، بنفس الأوزان، وابتعد عن الفشل تماماً. هنا يترسخ التكيّف فعلياً، وتجاهله هو سبب توقف المتوسطين لأشهر.']];
+const ul=el('ul','list');
+R.forEach((r,i)=>ul.appendChild(el('li','',`<span class="k">${i+1}</span><span><b>${en?r[0]:r[1]}</b>${en?r[2]:r[3]}</span>`)));
+v.appendChild(ul);
+v.appendChild(el('h3','sec dsp',en?'Volume per rotation':'الحجم لكل دورة'));
+const V=[['Biceps','البايسبس','14','Up from 3. Two exercises on every pull day — one stretched, one constant tension','ارتفعت من ٣. تمرينان في كل يوم سحب — واحد ممدود وواحد بشدّ ثابت'],
+['Triceps','الترايسبس','14','Up from 3. Same pairing on every push day','ارتفعت من ٣. نفس الاقتران في كل يوم دفع'],
+['Lats and back','الظهر','18','The flare that makes the waist look narrow','الانفراج الذي يجعل الخصر يبدو أنحف'],
+['Chest','الصدر','16','Two sessions, machine and dumbbell','حصتان، جهاز ودمبل'],
+['Abs','البطن','14','Loaded and progressive, every session','بأوزان وبتقدم، في كل حصة'],
+['Side delts','الدالية الجانبية','13','Four of the five sessions. Still the best visual return per set','أربع من خمس حصص. ما زالت أفضل عائد بصري لكل مجموعة'],
+['Legs','الأرجل','14','Down from 22, on purpose. Your legs score 91 — this holds them while the arms catch up','انخفضت من ٢٢ عن قصد. رجلاك تسجلان ٩١ — هذا يحافظ عليهما بينما تلحق الذراعان']];
+v.appendChild(el('div','',`<table><tr><th>${en?'Muscle':'العضلة'}</th><th>${en?'Sets':'مجموعة'}</th><th>${en?'Why':'السبب'}</th></tr>`+
+V.map(x=>`<tr><td><b>${en?x[0]:x[1]}</b></td><td class="n"><strong>${x[2]}</strong></td><td>${en?x[3]:x[4]}</td></tr>`).join('')+'</table>'));
+v.appendChild(el('p','sub',en
+?'Volumes sit where the dose-response research says the returns are: growth keeps improving as weekly sets rise, with clear diminishing returns past roughly 20 direct sets per muscle. Above that, recovery becomes the limit — especially while eating in a deficit.'
+:'الأحجام موضوعة حيث تقول أبحاث العلاقة بين الجرعة والنتيجة: النمو يتحسن كلما زادت المجموعات، مع تناقص واضح بعد نحو ٢٠ مجموعة مباشرة للعضلة. بعدها يصبح الاستشفاء هو الحد — خصوصاً في العجز الحراري.'));
+}
+function renderYou(){
+const v=$('#v-you');v.innerHTML='';const en=LANG==='en';
+v.appendChild(el('h2','title dsp',en?'Your scan':'قياسك'));
+v.appendChild(el('p','sub',en?'body scan, 15 August 2026':'body scan، ١٥ أغسطس ٢٠٢٦'));
+const S2=[['85.2','kg','Weight','الوزن'],['21.4','%','Body fat','نسبة الدهون'],['63.7','kg','Muscle','الكتلة العضلية'],
+['11.5','kg','Trunk fat','دهون الجذع'],['7','','Visceral','الدهون الحشوية'],['28.8','','BMI','مؤشر الكتلة']];
+const g=el('div','stats');
+S2.forEach(s=>g.appendChild(el('div','stat',
+`<div class="v">${s[0]}<small>${s[1]}</small></div><div class="k">${en?s[2]:s[3]}</div>`)));
+v.appendChild(g);
+const today=new Date(), cut=new Date(today.getFullYear(),today.getMonth(),today.getDate()-6);
+const last7=JOURNAL.filter(j=>{const[y,m,d]=j.d.split('-').map(Number);return new Date(y,m-1,d)>=cut}).length;
+const sinceD=JOURNAL.length?daysSince(JOURNAL[JOURNAL.length-1].d):null;
+v.appendChild(el('h3','sec dsp',en?'Your training':'تدريبك'));
+v.appendChild(el('div','stats',
+`<div class="stat"><div class="v">${last7}</div><div class="k">${esc(T(CO.last7))}</div></div>
+<div class="stat"><div class="v">${JOURNAL.length}</div><div class="k">${esc(T(CO.total))}</div></div>
+<div class="stat"><div class="v">${sinceD===null?'—':sinceD}</div><div class="k">${esc(T(CO.since))}</div></div>`));
+v.appendChild(el('h3','sec dsp',esc(T(CO.history))));
+if(!JOURNAL.length) v.appendChild(el('p','sub',esc(T(CO.noHistory))));
+else{
+const ul=el('ul','hist');
+JOURNAL.slice(-12).reverse().forEach(j=>{
+ul.appendChild(el('li','',`<span class="c">${esc(j.code)}</span><span class="d">${esc(agoLabel(j.d))} · ${esc(j.d)}</span>`));
+});
+v.appendChild(ul);
+}
+v.appendChild(el('div','note',en
+?'<p><b>Read this before anything else.</b> Your last two scans showed weight coming off while fat stayed flat and trunk fat rose slightly. In other words, what you lost was muscle, not fat.</p><p>That is the exact pattern behind your complaint: the belly is still there and the frame underneath got smaller, so it looks more prominent, not less. You do not have a fat-loss problem you can cardio your way out of. You have a muscle-retention and protein problem.</p>'
+:'<p><b>اقرأ هذا قبل أي شيء.</b> بين مايو وأغسطس خسرت ١٫٥ كغ على الميزان، وكانت كلها تقريباً عضلات. كتلة الدهون من ١٨٫١ إلى ١٨٫٢ كغ. ودهون الجذع ارتفعت من ١١٫١ إلى ١١٫٥ كغ.</p><p>هذا بالضبط سبب شكواك: الكرش ما زال والهيكل تحته صار أصغر فبدا أوضح لا أقل. مشكلتك ليست حرق دهون تُحل بالكارديو، بل الحفاظ على العضلة والبروتين.</p>'));
+v.appendChild(el('div','note ok',en
+?'<p><b>The good news.</b> Visceral fat and metabolic age both improved, and your legs score very well. Your limbs tell the story: your legs carry far more muscle than your arms. Your upper body is the lagging half, and it is exactly the half that creates the V-shape. That is why four of the five sessions train side delts, and why the arms just doubled in volume while the legs gave some up.</p>'
+:'<p><b>الأخبار الجيدة.</b> الدهون الحشوية نزلت من ٨ إلى ٧، والعمر الأيضي صار ٣٦، ونتيجة عضلات الرجلين ٩١. الأطراف تحكي القصة: الرجلان ٢١٫٧ كغ عضل والذراعان ٨٫٠ كغ. الجزء العلوي هو المتأخر، وهو بالضبط الذي يصنع شكل الـ V‎. لذلك أربع حصص من الخمس تدرّب الدالية الجانبية، ولذلك تضاعف حجم عمل الذراعين بينما تنازلت الأرجل عن جزء.</p>'));
+v.appendChild(el('h3','sec dsp',en?'Targets, 12 weeks from your next scan':'أهداف بعد ١٢ أسبوعاً من قياسك القادم'));
+const G=[['Body weight','وزن الجسم','85.2 kg','79–81 kg'],['Fat mass','كتلة الدهون','—','12–13 kg'],
+['Muscle mass','الكتلة العضلية','63.7 kg','63.7–65 kg'],['Trunk fat','دهون الجذع','—','7.5–8.5 kg'],
+['Body fat','نسبة الدهون','21.4%','15–16%'],['Waist at navel','محيط الخصر','—','-8 to -10 cm']];
+v.appendChild(el('div','',`<table><tr><th>${en?'Metric':'المؤشر'}</th><th>${en?'Aug':'أغسطس'}</th><th>${en?'Target':'الهدف'}</th></tr>`+
+G.map(x=>`<tr><td>${en?x[0]:x[1]}</td><td class="n">${x[2]}</td><td class="n"><strong>${x[3]}</strong></td></tr>`).join('')+'</table>'));
+v.appendChild(el('p','sub',en
+?'These numbers are from August and are now out of date. Get a fresh body scan scan and the targets can be set properly. The scale is not your metric either — measure your waist at the navel every week, same morning, fasted.'
+:'هذه الأرقام من أغسطس وأصبحت قديمة الآن. أجرِ قياس body scan جديداً لتُضبط الأهداف بشكل صحيح. والميزان ليس مقياسك أيضاً — قِس خصرك عند السرة كل أسبوع، نفس الصباح، على معدة فارغة.'));
+v.appendChild(el('p','foot',en
+?'This is a training and general nutrition plan, not medical advice. Built for a healthy adult with over a year of consistent training. Clear it with a doctor if you have any cardiovascular, metabolic or orthopaedic condition, and stop any exercise that produces sharp or joint pain rather than muscular effort.'
+:'هذه خطة تدريب وتغذية عامة وليست استشارة طبية. وُضعت لشخص بالغ سليم لديه أكثر من سنة تدريب منتظم. راجع طبيبك إذا كان لديك أي حالة قلبية أو أيضية أو في المفاصل، وأوقف أي تمرين يسبب ألماً حاداً أو ألماً في المفصل بدل الإجهاد العضلي.'));
+}
+const ICONS={
+train:'<path d="M5 9v6M19 9v6M8 6.5v11M16 6.5v11M8 12h8"/>',
+core:'<rect x="6" y="4" width="12" height="16" rx="4"/><path d="M6.5 12h11M12 4.5v15"/>',
+food:'<path d="M5 3v8a3 3 0 0 0 6 0V3M8 11v10M17 3c-1.5 2-2 4-2 6s.5 3 2 3 2-1 2-3-.5-4-2-6zM17 12v9"/>',
+plan:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M7.5 14.5h4"/>',
+you:'<path d="M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM4 21c0-4 3.6-6 8-6s8 2 8 6"/>'};
+function renderNav(){
+const n=$('#nav');n.innerHTML='';
+[['train',CO.navTrain],['core',CO.navCore],['food',CO.navFood],['plan',CO.navPlan],['you',CO.navYou]]
+.forEach(([k,l])=>{
+const b=el('button',curView===k?'on':'');
+b.innerHTML=`<svg viewBox="0 0 24 24">${ICONS[k]}</svg><span>${esc(T(l))}</span>`;
+b.onclick=()=>setView(k);n.appendChild(b)});
+}
+function setView(k){
+curView=k;document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));
+$('#v-'+k).classList.add('on');renderNav();window.scrollTo({top:0});
+$('.railwrap').style.display=(k==='train')?'block':'none';
+}
+function renderAll(){
+document.body.dir=LANG==='ar'?'rtl':'ltr';document.documentElement.lang=LANG;
+$('#langBtn').textContent=LANG==='en'?'عربي':'EN';
+setAccent();renderRail();renderTrain();renderCore();renderFood();renderPlan();renderYou();renderNav();
+}
+$('#langBtn').onclick=()=>{LANG=LANG==='en'?'ar':'en';store.set('ppl4-lang',LANG);renderAll()};
+(function(){
+try{INSTALLED=window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true}catch(e){}
+LOG=store.get('ppl4-log')||{};
+HIST=store.get('ppl4-hist')||{};
+JOURNAL=store.get('ppl4-journal')||[];
+POS=store.get('ppl4-pos')??0;
+ROTLEN=store.get('ppl5-rotlen')??5;
+HIDEINSTALL=store.get('ppl4-hideinstall')||false;
+if(!store.get('ppl5-migrated')){
+const prevH=store.get('ppl4-hist')||store.get('ppl3-hist')||store.get('ppl2-hist')||{};
+const OLD={pushA:['machineChest','inclineDB','cableFly','cableLat','ohTri','cableCrunch'],
+pullA:['pulldown','chestRow','pullover','rearPec','inclineCurl','kneeRaise'],
+legsA:['legPress','legExt','seatedCurl','calf','latBonus','pallof'],
+legs:['legPress','legExt','seatedCurl','calf','latBonus','pallof'],
+pushB:['dbShoulder','dbLat','inclineMachine','pecDeck','pushdown','declineSit','chop'],
+pullB:['seatedRow','neutralPulldown','rearCable','shrug','cableCurl','abWheel'],
+legsB:['rdl','hackSquat','lyingCurl','seatedCalfR','latBonus','cableCrunch']};
+const m={};
+for(const k in prevH){
+const p=k.split('|'); if(p.length!==2) continue;
+const sid=p[0]==='legs'?'legsA':p[0], idx=parseInt(p[1],10);
+const list=OLD[p[0]]; if(!list) continue;
+const exKey=list[idx]; if(!exKey||!E[exKey]) continue;
+m[sid+'|'+E[exKey].n.en]=prevH[k];
+}
+for(const k in HIST){if(/\|\d+$/.test(k))delete HIST[k]}
+HIST=Object.assign(m,HIST);
+store.set('ppl4-hist',HIST);store.set('ppl5-migrated',true);
+}
+const l=store.get('ppl4-lang')||store.get('ppl3-lang');if(l==='ar'||l==='en')LANG=l;
+if(POS>=ROTLEN)POS=0;
+viewIdx=POS;
+renderAll();
+})();</script>
+</body>
+</html>
